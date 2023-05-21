@@ -50,7 +50,7 @@
     position: absolute;
     width: 380px;
     height: 380px;
-    background: #19191C;
+    background: var(--color-gradient);
     border-radius: 50%;
 }
 
@@ -66,5 +66,33 @@
 @media only screen and (max-width: 1500px) {
     .about-container {
         max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .about {
+        padding: 5rem 2% 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column-reverse;
+    }
+    
+    .introimg img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 365px) {
+    .introimg img {
+        width: 90vw;
     }
 }

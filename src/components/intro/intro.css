@@ -216,11 +216,11 @@
     }
 
     .intro-content h1 {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
 
     .intro-content h3 {
-        font-size: 1.75rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -236,21 +236,53 @@
     }
 
     .intro-content h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .intro-content h3 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .btn-cta {
-        width: 160px;
-        height: 42px;
+        width: 12rem;
+        height: 4rem;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .intro-container {
         padding: 70px 2% 0;
+        flex-direction: column;
+    }
+
+    .intro-content {
+        text-align: center;
+    }
+
+    .intro-container h3 {
+        font-size: 2.2rem;
+    }
+
+    .intro-container h1 {
+        font-size: 3.5rem;
+        margin-top: 10rem;
+    }
+
+    .btn-cta {
+        margin-bottom: 5rem;
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.2rem;
+    }
+
+    .image img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .image img {
+        width: 90vw;
     }
 }

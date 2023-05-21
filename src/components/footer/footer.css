@@ -4,7 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 2rem 9%;
-  background: black;
+  background: #0F0F0F;
 }
 
 .footer-text p {
@@ -28,4 +28,14 @@
 .arrow-up {
   font-size: 1.4rem;
   color: var(--color-white);
+}
+
+@media only screen and (max-width: 365px) {
+  .footer {
+      flex-direction: column-reverse;
+  }
+  footer p {
+    text-align: center;
+    margin-top: 2rem;
+  }
 }

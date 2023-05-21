@@ -145,6 +145,7 @@ const Education = () => {
   return (
     <section class="education "id="education">
     <div className="education-container">
+    <h2 class="education-header"> My <span> Education </span></h2>
       <div className="education-content">
         <div className="button-wrapper">
           <ButtonGroup
