@@ -1,6 +1,6 @@
 .skills-container {
-  width: 100%;
-  min-height: 100vh;
+  max-width: 100%;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   background: var(--color-bg-skills);
@@ -9,19 +9,19 @@
 }
 
 .skills-content {
-  width: 100%;
+  max-width: 100%;
   text-align: center;
   margin-top: 50px;
 }
 
 .skills-header {
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 2rem;
   font-size: 32px;
 }
 
 .skills-technologies {
-  width: 100%;
+  max-width: 100%;
 }
 
 .skills-icons {
@@ -41,6 +41,7 @@
   border-radius: 15px;
   font-size: 15px;
   width: 95px;
+  height: 95px;
   display: inline-block;
   position: relative;
   color: var(--color-white);
