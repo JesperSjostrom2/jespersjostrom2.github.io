@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <header class="header">
-        <a href="#" class="logo"> <span>J</span>esper. </a>
+        <a href="#home" class="logo"> <span>J</span>esper. </a>
 
         <nav ref={navRef} class="navbar">
         <a href="#about" onClick={closeNavbar}>About</a>
