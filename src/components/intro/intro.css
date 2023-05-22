@@ -11,8 +11,9 @@
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
-    opacity: 0;
     animation: slideRight 1s ease forwards;
+    opacity: 0;
+    
     animation-delay: 0.7s;
 }
 
@@ -278,6 +279,12 @@
     .image img {
         width: 70vw;
         margin-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .intro-glowing-circle {
+        transform: scale(0.7);
     }
 }
 
