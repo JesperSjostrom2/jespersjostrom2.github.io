@@ -7,7 +7,7 @@ import { FaInstagram } from 'react-icons/fa'
 
 const Intro = () => {
   return (
-    <section class="home "id="home">
+    <section class="home" id="home">
     <div className="intro-container">
       <div className="intro-content">
         <h1>Jesper Sjöström</h1>
