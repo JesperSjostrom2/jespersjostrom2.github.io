@@ -4,12 +4,16 @@ import './contact.css'
 
 const Contact = () => {
 
+  const emailJsServiceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const emailJsTemplateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const emailJsUserId = process.env.REACT_APP_EMAILJS_USER_ID;
+
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_8wlkj77', 'template_xtqp89o', form.current, 'RnEzEo6bNyMJJz6Ju')
+    emailjs.sendForm(emailJsServiceId, emailJsTemplateId, form.current, emailJsUserId)
       .then((result) => {
           console.log(result.text);
           console.log("message sent");
