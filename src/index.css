@@ -12,6 +12,7 @@
     text-decoration: none;
 }
 
+
 html {
     width: 100%;
 }
@@ -147,5 +148,16 @@ body {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes slideRightVariant {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
