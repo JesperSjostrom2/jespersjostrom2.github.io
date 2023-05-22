@@ -8,6 +8,8 @@ import Skills from './components/skills/Skills';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import Loginpage from './components/loginpage/Loginpage';
+import Adminpage from './components/admin/Admin';
+import Signup from './components/signup/Signup';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Footer />
         </>} />
         <Route path="/login" element={<Loginpage />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/admin" element={<Adminpage />} />
       </Routes>
     </BrowserRouter>
   );
