@@ -8,7 +8,7 @@
 }
 
 .education-content {
-    width: 100%;
+    max-width: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -42,13 +42,25 @@
 
 .education-buttons .selected {
   color: var(--color-main);
-  font-weight: 600;
   width: 30px;
-  animation: slideRight 0.5s ease forwards;
+  border-left: 2px solid #f06;
+  padding-left: 1rem;
+  animation: slideRightVariant 1s ease forwards;
 }
 
 .education-buttons {
   margin-top: 80px;
+  flex: 1;
+  background: rgba(22, 22, 22, .2);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  max-width: 13rem;
+  max-height: 20rem;
+  margin-right: 4rem;
+  border-radius: 0.5rem;
+  padding-top: 1rem;
 }
 
 .button-wrapper {
@@ -57,13 +69,9 @@
   margin: 0 10% 0 20%;
 }
 
-.education-buttons {
-  flex: 1;
-}
-
 .button-output-content {
   flex: 2;
-  padding: 100px 0px 0 75px;
+  padding: 100px 0 0 0;
 }
 
 .button-output-content h2 {
@@ -73,7 +81,8 @@
 .button-output-content li {
   color: lightgray;
   margin-top: 22px;
-  max-width: 400px;
+  max-width: 40rem;
+  font-size: 1.1rem;
 }
 
 .button-output-content h4 {
@@ -83,4 +92,23 @@
 
 .button-output-content h5 {
   font-size: 16px;
+}
+
+@media only screen and (max-width: 700px) {
+  .button-wrapper {
+    flex-direction: column;
+  }
+  .education-buttons {
+    max-width: unset;
+    max-height: unset;
+  }
+  .button-output-content {
+    padding-top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 476px) {
+  .button-output-content {
+    padding: 80px 0 0 20px;
+  }
 }
