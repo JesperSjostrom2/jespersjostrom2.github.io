@@ -40,12 +40,24 @@
 .heading span {
     background: linear-gradient(30deg, #f06, #3cf);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
+}
+
+.introimg {
+    width: 410px;
+    height: 410px;
+    width: 100%;
+    max-width: 410px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .introimg .intro-glowing-circle::after {
@@ -71,6 +83,10 @@
     animation: none;
 }
 
+p span {
+    color: var(--color-main);
+}
+
 @media only screen and (max-width: 1500px) {
     .about-container {
         max-width: 100%;
@@ -83,7 +99,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
     .about-container {
         flex-direction: column-reverse;
         text-align: center;
@@ -105,7 +121,12 @@
     .about-content p {
         margin-bottom: 4rem;
     }
+}  
 
+@media only screen and (max-width: 800px) {
+    .about-content {
+        margin: 2rem 1rem 0;
+    }
 }
 
 @media only screen and (max-width: 365px) {
