@@ -44,7 +44,9 @@
 }
 
 .header span {
-    color: var(--color-main);
+    background: linear-gradient(30deg, #f06, #3cf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-btn {

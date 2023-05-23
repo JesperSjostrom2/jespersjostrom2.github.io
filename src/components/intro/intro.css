@@ -20,7 +20,9 @@
 .intro-content h3 {
     font-size: 2.2rem;
     font-weight: 700;
-    color: var(--color-main);
+    background: linear-gradient(90deg, #f06, #3cf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;

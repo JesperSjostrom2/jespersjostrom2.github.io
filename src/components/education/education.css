@@ -16,13 +16,15 @@
 }
 
 .education-header {
-  font-size: 32px;
+  font-size: 3rem;
   text-align: center;
   margin-top: 5rem;
 }
 
 .education-header span {
-  color: var(--color-main);
+  background: linear-gradient(30deg, #f06, #3cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .education-buttons button {

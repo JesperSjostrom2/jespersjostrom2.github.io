@@ -15,22 +15,26 @@
 }
 
 .contact-header {
-  margin-bottom: 2rem; 
+  margin-bottom: 1rem; 
   font-size: 1.5rem; 
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .contact-header span {
-  color: var(--color-main);
+  background: linear-gradient(30deg, #f06, #3cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .contact-me {
-  font-size: 1.6rem; 
+  font-size: 3rem; 
   margin-bottom: 2rem; 
 }
 
 .contact-me span {
-  color: var(--color-main);
+  background: linear-gradient(30deg, #f06, #3cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .short-info {
