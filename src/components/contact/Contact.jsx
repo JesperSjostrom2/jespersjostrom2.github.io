@@ -43,7 +43,7 @@ const Contact = () => {
       <div className="contact-content">
         <h1 className="contact-header" data-aos="fade-up"> What's <span>next?</span></h1>
         <h1 className="contact-me"data-aos="fade-up" data-aos-delay="200"> Contact <span>Me!</span> </h1>
-        <p className="short-info" data-aos="fade-up" data-aos-delay="300"> I'm interested in freelance opportunities - especially abomitious or large projects. However, if you have other request or question, don't hesitate to use the form.</p>
+        <p className="short-info" data-aos="fade-up" data-aos-delay="300"> Thank you for visiting my portfolio. I would love to hear from you! If you have any inquiries, collaboration opportunities, or simply want to say hello, please feel free to reach out to me using the contact form below. I'll make sure to respond as soon as possible. Let's connect and explore new possibilities together!</p>
 
         <form ref={form} data-aos="fade-up" data-aos-delay="700" onSubmit={sendEmail}>
           <div className="input-box">
