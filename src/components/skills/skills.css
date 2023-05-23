@@ -29,13 +29,47 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 60px;
-  margin-top: 60px;
+  margin-top: 4rem;
   padding: 0 20%;
+}
+
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  height: 100px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 4px;
+  transition: background-color 0.5s ease;
+}
+
+.dot:last-child {
+  margin-right: 0;
+}
+
+.dots-container:hover .dot{
+  background-color: var(--color-white);
+}
+
+.icons-css {
+  color: white;
+  font-size: 4rem;
+  border-radius: 10px;
+  padding: 5px;
+  background: linear-gradient(30deg, #f06, #3cf);
 }
 
 .skills-header span {
   background: linear-gradient(30deg, #f06, #3cf);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -58,3 +92,10 @@
       padding: 0 5%;
   }
 }
+
+@media only screen and (max-width: 320px) {
+  .skills-icons {
+      gap: 1rem;
+  }
+}
+
