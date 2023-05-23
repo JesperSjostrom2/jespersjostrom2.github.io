@@ -18,7 +18,7 @@ const Intro = () => {
         <a href="https://github.com/JesperSjostrom2?tab=overview&from=2023-04-01&to=2023-04-28"target="_blank"><FaGithub/></a>
         <a href="https://www.instagram.com/jespersjostrom00/"target="_blank"><FaInstagram/></a>
       </div>
-        <a href="" className="btn-cta">Let's talk</a>
+        <a href="#contact" className="btn-cta">Let's talk</a>
           </div>
 
           <div className="intro-img">
