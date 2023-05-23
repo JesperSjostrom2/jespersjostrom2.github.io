@@ -5,7 +5,6 @@ import { FiChevronRight } from 'react-icons/fi';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-
 const styleEducation = { color: "#F06"}
 
 function ButtonGroup({ selectedButton, handleButtonClick }) {
@@ -46,28 +45,28 @@ function ButtonOutput({ selectedButton }) {
   switch (selectedButton) {
     case 'button1':
       return (
-
+        
         //HUDDINGE GYMNASIET
         <div className="button-output-content">
-          <h2 data-aos="fade-right" data-aos-delay="600">Huddinge gymnasiet</h2>
-          <h4 data-aos="fade-right" data-aos-delay="700">Student</h4>
-          <h5 data-aos="fade-right" data-aos-delay="800"> 2016-2019 </h5>
+          <h2 data-aos="fade-right" data-aos-delay="200">Huddinge gymnasiet</h2>
+          <h4 data-aos="fade-right" data-aos-delay="300">Student</h4>
+          <h5 data-aos="fade-right" data-aos-delay="400"> 2016-2019 </h5>
           <ul>
-            <li data-aos="fade-right" data-aos-delay="1000">
+            <li data-aos="fade-right" data-aos-delay="500">
              <FiChevronRight style={styleEducation}/> Inriktning Informations- och medieteknik
             </li>
-            <li data-aos="fade-right" data-aos-delay="1100">
+            <li data-aos="fade-right" data-aos-delay="600">
             <FiChevronRight style={styleEducation}/> Introduktion till HTML, CSS & Javascript 
             </li>
-            <li data-aos="fade-right" data-aos-delay="1200">
+            <li data-aos="fade-right" data-aos-delay="700">
             <FiChevronRight style={styleEducation}/> Datorteknik 1b, Digitalt skapade 1, Gränssnitsdesign, Programmering 1 (Java), Teknik 1, Webbserverprogrammering 1, Webbutveckling 1
             </li>
-            <li data-aos="fade-right" data-aos-delay="1300">
+            <li data-aos="fade-right" data-aos-delay="800">
             <FiChevronRight style={styleEducation}/> Intresset av webbutveckling & design började här
             </li>
           </ul>
         </div>
-      );
+    );
 
       //ÖSTRA GYMNASIET
     case 'button2':
