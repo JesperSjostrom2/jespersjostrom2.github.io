@@ -18,6 +18,7 @@
     animation: slideTop 1s ease forwards;
 }
 
+
 .navbar {
     margin-left: 40%;
 }
@@ -25,7 +26,7 @@
 .navbar a {
     font-size: 1.2rem;
     color: var(--color-white);
-    font-weight: 500;
+    font-weight: 700;
     margin-left: 3rem;
     transition: 0.3s;
     animation: slideTop 0.5s ease forwards;
@@ -34,19 +35,11 @@
 }
 
 .navbar a:hover {
-    color: var(--color-main);
-}
-
-.chapter-nav {
-    font-size: 1rem;
-    color: var(--color-main);
-    margin-right: 1rem;
-}
-
-.header span {
     background: linear-gradient(30deg, #f06, #3cf);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
 .nav-btn {
