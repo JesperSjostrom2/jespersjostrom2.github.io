@@ -5,6 +5,7 @@
   background: var(--color-bg-education);
   justify-content: center;
   align-items: center;
+
 }
 
 .education-content {
@@ -24,6 +25,7 @@
 .education-header span {
   background: linear-gradient(30deg, #f06, #3cf);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -45,9 +47,13 @@
 .education-buttons .selected {
   color: var(--color-main);
   width: 30px;
-  border-left: 2px solid #f06;
+  border-left: 2px solid lightgray;
   padding-left: 1rem;
   animation: slideRightVariant 1s ease forwards;
+}
+
+.education-content ul {
+  max-width: 80%;
 }
 
 .education-buttons {
@@ -68,7 +74,7 @@
 .button-wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 0 10% 0 20%;
+  margin: 0 5% 0 10%;
 }
 
 .button-output-content {
@@ -100,17 +106,52 @@
   .button-wrapper {
     flex-direction: column;
   }
+
   .education-buttons {
     max-width: unset;
     max-height: unset;
+    margin-top: 4rem;
+    flex-direction: unset;
+    margin: unset;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2rem;
   }
-  .button-output-content {
-    padding-top: 3rem;
-  }
-}
 
-@media only screen and (max-width: 476px) {
+  .education-buttons button {
+    padding-right: 2rem;
+    flex: unset;
+    max-width: 1rem;
+  }
+
+  .education-buttons .selected {
+    border: unset;
+  }
+
+  .education-buttons .selected:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 80%;
+    border-bottom: 2px solid lightgray;
+  }
+
   .button-output-content {
-    padding: 80px 0 0 20px;
+    padding-top: 5rem;
+    flex: unset;
+  }
+
+  .button-output-content h2{
+    font-size: 1.3rem;
+  }
+
+  .button-output-content h4{
+    font-size: 1.1rem;
+  }
+
+  .button-output-content h5 {
+    font-size: 0.975rem;
   }
 }
