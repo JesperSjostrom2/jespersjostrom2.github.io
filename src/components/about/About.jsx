@@ -20,7 +20,7 @@ const About = () => {
             </div>
           </div>
         <div className="about-content">
-        <h2 class="heading" data-aos="fade-up" data-aos-delay="100"> About <span> Me</span></h2>
+        <h2 className="heading" data-aos="fade-up" data-aos-delay="100"> About <span> Me</span></h2>
         <h3 data-aos="fade-up" data-aos-delay="300"> Jesper Sjöström - 23 y/o - Stockholm / Helsinki </h3>
         <p data-aos="fade-up" data-aos-delay="400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur maiores voluptatum perferendis odio fugiat ratione modi. Necessitatibus, ipsum accusantium ipsam beatae corrupti exercitationem quo. Dolorem in illum ut facere at!</p>
         <p data-aos="fade-up" data-aos-delay="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis dolor dolorum nulla distinctio enim, tempora delectus ratione tempore doloribus iure reiciendis cumque eligendi nihil ut dolore architecto eius eaque.</p>
