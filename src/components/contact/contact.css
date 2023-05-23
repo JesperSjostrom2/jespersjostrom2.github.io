@@ -3,15 +3,17 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   background-color: #171717;
   overflow: hidden;
-  padding: 20px;
 }
 
 .contact-content {
+  max-width: 80%;
+  width: 100%;
   margin-top: 3rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .contact-header {
@@ -23,6 +25,7 @@
 .contact-header span {
   background: linear-gradient(30deg, #f06, #3cf);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -34,16 +37,17 @@
 .contact-me span {
   background: linear-gradient(30deg, #f06, #3cf);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .short-info {
-  margin: 0 1.5rem 2rem 1.5rem;
-  max-width: 100%;
+  margin: 0 auto;
+  max-width: 50rem;
 }
 
 .contact form {
-  max-width: 80%;
+  max-width: 60%;
   margin: 1rem auto;
   text-align: center;
   margin-bottom: 2rem;
@@ -135,4 +139,16 @@
 .buttonsubmit {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact form {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-container {
+    padding: 0;
+  }
 }
