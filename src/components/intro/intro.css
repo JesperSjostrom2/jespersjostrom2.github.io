@@ -2,7 +2,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 10rem 9% 2rem;
+    padding: 10rem 15% 2rem;
     background: var(--color-bg-intro);
     justify-content: center;
 }
@@ -20,8 +20,9 @@
 .intro-content h3 {
     font-size: 2.2rem;
     font-weight: 700;
-    background: linear-gradient(90deg, #f06, #3cf);
+    background: linear-gradient(30deg, #f06, #3cf);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
@@ -35,6 +36,7 @@
     animation: slideLeft 0.5s ease forwards;
     opacity: 0;
     animation-delay: 1.3s;
+    padding: 1rem;
 }
 
 .btn-cta {
@@ -158,6 +160,12 @@
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2.1s, 3.1s;
+    width: 100%;
+    max-width: 410px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro-img .intro-glowing-circle {
@@ -287,6 +295,20 @@
 @media only screen and (max-width: 480px) {
     .intro-glowing-circle {
         transform: scale(0.7);
+    }
+}
+
+@media only screen and (max-width: 480px)
+{
+    .intro-img {
+        overflow: hidden;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .about-container .image img {
+        top: 80px;
     }
 }
 
