@@ -45,17 +45,17 @@ const Contact = () => {
         <h1 className="contact-me"data-aos="fade-up" data-aos-delay="200"> Contact <span>Me!</span> </h1>
         <p className="short-info" data-aos="fade-up" data-aos-delay="300"> I'm interested in freelance opportunities - especially abomitious or large projects. However, if you have other request or question, don't hesitate to use the form.</p>
 
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} data-aos="fade-up" data-aos-delay="700" onSubmit={sendEmail}>
           <div className="input-box">
-          <input className="name-input" data-aos="fade-right" data-aos-delay="400" type="text" name="user_name" placeholder="Full Name" required></input>
-          <input className="email-input" data-aos="fade-right" data-aos-delay="700" type="email" name="user_email" placeholder="Email" required></input>
+          <input className="name-input" type="text" name="user_name" placeholder="Full Name" required></input>
+          <input className="email-input" type="email" name="user_email" placeholder="Email" required></input>
           </div>
           <div className="input-box2">
-          <input className="type-input" data-aos="fade-right" data-aos-delay="800" type="subject" name="user_subject" placeholder="Subject" required></input>
+          <input className="type-input" type="subject" name="user_subject" placeholder="Subject" required></input>
           </div>
-          <textarea className="textarea-input" data-aos="fade-right" data-aos-delay="1000" cols="30" rows="10" name="Message" placeholder="Message" required></textarea>
+          <textarea className="textarea-input" cols="30" rows="10" name="Message" placeholder="Message" required></textarea>
           <div className="buttonsubmit">
-          <button className="btn-contactform" data-aos="fade-up" data-aos-delay="500" type="submit" value="Send"> Submit </button>
+          <button className="btn-contactform" type="submit" value="Send"> Submit </button>
           </div>
           </form>
         </div>
