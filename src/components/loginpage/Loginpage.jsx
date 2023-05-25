@@ -24,7 +24,7 @@ const Loginpage = () => {
                     history("/admin",{state:{id:email}})
                 }
                 else if(res.data=="notexist"){
-                    alert("User have not sign up")
+                    alert("This user has not signed up")
                 }
             })
             .catch(e=>{

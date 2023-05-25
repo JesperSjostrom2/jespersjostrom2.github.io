@@ -21,7 +21,8 @@ function Signup() {
                   alert("User already exists")
               }
               else if(res.data=="notexist"){
-                  history("/admin",{state:{id:email}})
+                alert('User has been created')
+                history("/login",{state:{id:email}})
               }
           })
           .catch(e=>{
