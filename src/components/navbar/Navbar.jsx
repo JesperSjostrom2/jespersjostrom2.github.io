@@ -1,9 +1,12 @@
 import React from 'react'
 import './navbar.css'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 const Navbar = () => {
+  useEffect(() => {
+    document.title = "Jesper Sjostrom | Frontend Developer"
+ }, []);
   const navRef = useRef()
 
   const showNavbar = () => {
@@ -15,10 +18,11 @@ const Navbar = () => {
   };
 
   return (
-    <header class="header">
-        <a href="#home" class="logo"> <span>J</span>esper. </a>
+    
+    <header className="header">
+        <a href="#home" className="logo"> <span>J</span>esper. </a>
 
-        <nav ref={navRef} class="navbar">
+        <nav ref={navRef} className="navbar">
         <a href="#about" onClick={closeNavbar}>About</a>
         <a href="#education" onClick={closeNavbar}>Education</a>
         <a href="#skills" onClick={closeNavbar}>Skills</a>

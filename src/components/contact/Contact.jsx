@@ -38,7 +38,7 @@ const Contact = () => {
     </form>
 
   return (
-    <section class="contact "id="contact">
+    <section className="contact "id="contact">
     <div className="contact-container">
       <div className="contact-content">
         <h1 className="contact-header" data-aos="fade-up"> What's <span>next?</span></h1>
