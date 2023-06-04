@@ -10,7 +10,6 @@ import Footer from './components/footer/Footer';
 import Loginpage from './components/loginpage/Loginpage';
 import Adminpage from './components/admin/Admin';
 import Signup from './components/signup/Signup';
-import NotFound from './notfound/NotFound';
 import { Helmet } from 'react-helmet';
 
 function MainLayout(props) {
@@ -42,7 +41,6 @@ function App() {
         <Route path="/login" element={<Loginpage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/admin" element={<Adminpage />} />
-        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Helmet>
