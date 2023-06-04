@@ -68,13 +68,13 @@
     cursor: pointer;
     font-weight: 600;
     font-size: 1rem;
+    animation: slideTop 0.7s ease forwards;
+    opacity: 0;
+    animation-delay: 0.7s;
   }
 
   .cv a {
     all: unset;
-    display: block;
-    text-decoration: none;
-    color: inherit;
   }
   
   .cv:hover {
