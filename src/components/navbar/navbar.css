@@ -15,7 +15,6 @@
     text-decoration: none;
     color: var(--color-white);
     font-weight: 600;
-    animation: slideTop 1s ease forwards;
     width: 2.5rem;
     height: auto;
     
@@ -67,9 +66,6 @@
     border-radius: 0.2rem;
     margin-left: 2rem;
     cursor: pointer;
-    animation: slideTop 0.5s ease forwards;
-    opacity: 0;
-    animation-delay: 0.7s;
     font-weight: 600;
     font-size: 1rem;
   }
@@ -146,15 +142,14 @@
     left: 49.5%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: 0.5s;
-    opacity: 0;
-    transition: 1s;
     width: 4rem;
     height: auto;
     background-color: var(--color-main);
     padding: 0.5rem;
     border-radius: 1rem;
+    animation: slideBottom 0.5s ease forwards;
+    opacity: 0;
+    animation-delay: 0.7s;
   }
   
   @media only screen and (max-width: 1024px) {
@@ -171,7 +166,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      height: 60%;
+      height: 70%;
       width: 100%;
       display: flex;
       flex-direction: column;
