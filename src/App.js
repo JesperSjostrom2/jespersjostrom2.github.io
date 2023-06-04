@@ -30,7 +30,7 @@ function App() {
           path="/"
           element={
             <>
-              <Helmet>
+             <Helmet>
                 <title>Jesper Sjöström | Frontend Developer</title>
                 <meta name="description" content="I am a frontend developer who loves design and creating websites." />
               </Helmet>
@@ -51,3 +51,5 @@ function App() {
     </BrowserRouter>
   );
 }
+
+export default App;
