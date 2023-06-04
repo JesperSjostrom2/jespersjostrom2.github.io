@@ -20,17 +20,17 @@ function App() {
         <meta name="description" content="I am a frontend developer who loves design and creating websites." />
       </Helmet>
       <Navbar />
+      <Intro />
+      <About />
+      <Education />
+      <Skills />
+      <Contact />
+      <Footer />
       <Routes>
-        <Route path="/" element={<Intro />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Loginpage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/admin" element={<Adminpage />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
