@@ -39,7 +39,7 @@ const Navbar = () => {
         </a>
         <button className="cv">
         <a href="https://github.com/jespersjostrom2/my-cv/raw/main/cv.pdf" download="cv.pdf"></a>
-          <span>CV</span>
+          <span>Download CV</span>
           <i></i>
         </button>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
