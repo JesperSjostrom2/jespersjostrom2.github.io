@@ -1,7 +1,7 @@
 .education-container {
   max-width: 100%;
   min-height: 100vh;
-  padding: 20px;
+  padding-top: 1.5rem;
   background: var(--color-bg-education);
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 
 .education-header {
@@ -79,7 +79,7 @@
 
 .button-output-content {
   flex: 2;
-  padding: 100px 0 0 0;
+  padding: 4rem 0 0 2rem;
 }
 
 .button-output-content h2 {
@@ -94,37 +94,46 @@
 }
 
 .button-output-content h4 {
+  background: linear-gradient(30deg, #f06, #3cf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.2rem
+}
+
+.chevron {
   color: var(--color-main);
-  font-size: 18px;
 }
 
 .button-output-content h5 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 700px) {
   .button-wrapper {
     flex-direction: column;
     overflow-x: scroll;
+    margin: 0;
   }
 
   .education-buttons {
     max-width: unset;
     max-height: unset;
-    margin-top: 4rem;
-    flex-direction: unset;
-    margin: unset;
-    gap: 0.5rem;
     margin-top: 2rem;
+    flex-direction: unset;
+    gap: 0.5rem;
+    margin-right: 0;
     overflow-x: scroll;
     justify-content: flex-start;
+    text-align: center;
   }
 
   .education-buttons button {
     padding-right: 2rem;
-    flex: unset;
-    max-width: 1rem;
+    flex: 1 0 auto;
+    max-width: unset;
     overflow-x: scroll;
+    width: 30px;
   }
 
   .education-buttons .selected {
@@ -135,27 +144,36 @@
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 1px;
     width: 80%;
     border-bottom: 2px solid;
   }
 
   .button-output-content {
-    padding-top: 5rem;
-    flex: unset;
+    flex: 2;
+    padding: 4rem 0 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .button-output-content li {
+    font-size: 1.2rem;
   }
 
   .button-output-content h2 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 
   .button-output-content h4 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 
   .button-output-content h5 {
-    font-size: 0.975rem;
+    font-size: 1rem;
   }
 }
 

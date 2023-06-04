@@ -5,8 +5,6 @@ import { FiChevronRight } from 'react-icons/fi';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-const styleEducation = { color: "#F06"}
-
 function ButtonGroup({ selectedButton, handleButtonClick }) {
   return (
     <div className="education-buttons" data-aos="fade-right" data-aos-delay="100">
@@ -53,16 +51,16 @@ function ButtonOutput({ selectedButton }) {
           <h5 data-aos="fade-right" data-aos-delay="200"> 2016-2019 </h5>
           <ul>
             <li data-aos="fade-right" data-aos-delay="250">
-             <FiChevronRight style={styleEducation}/> Specialization in Information and Media Technology.
+             <FiChevronRight className="chevron"/> Specialization in Information and Media Technology.
             </li>
             <li data-aos="fade-right" data-aos-delay="300">
-            <FiChevronRight style={styleEducation}/> Introduction to HTML, CSS & Javascript.
+            <FiChevronRight className="chevron"/> Introduction to HTML, CSS & Javascript.
             </li>
             <li data-aos="fade-right" data-aos-delay="350">
-            <FiChevronRight style={styleEducation}/> Courses: Computer Technology, Digital Creation, Interface Design, Programming (Java), Technology, Web Server Programming, Web Development.
+            <FiChevronRight className="chevron"/> Courses: Computer Technology, Digital Creation, Interface Design, Programming (Java), Technology, Web Server Programming, Web Development.
             </li>
             <li data-aos="fade-right" data-aos-delay="400">
-            <FiChevronRight style={styleEducation}/> The interest in web development & design began here.
+            <FiChevronRight className="chevron"/> The interest in web development & design began here.
             </li>
           </ul>
         </div>
@@ -77,16 +75,16 @@ function ButtonOutput({ selectedButton }) {
           <h5> 2019-2020 </h5>
           <ul>
             <li>
-             <FiChevronRight style={styleEducation}/> Specialization in Web Development.
+             <FiChevronRight className="chevron"/> Specialization in Web Development.
             </li>
             <li>
-            <FiChevronRight style={styleEducation}/> Programming 2 & 3 (C# & JS)
+            <FiChevronRight className="chevron"/> Programming 2 & 3 (C# & JS)
             </li>
             <li>
-            <FiChevronRight style={styleEducation}/> Software Design, Data Storage, Interface Design, Technology, Internship, Exam work.
+            <FiChevronRight className="chevron"/> Software Design, Data Storage, Interface Design, Technology, Internship, Exam work.
             </li>
             <li>
-            <FiChevronRight style={styleEducation}/> Mainly focused on frontend development but also learning how backend works
+            <FiChevronRight className="chevron"/> Mainly focused on frontend development but also learning how backend works
 Here, I got to experience both frontend and backend, and it was here that I realized I had more interest in design and frontend development compared to backend.
             </li>
           </ul>
@@ -102,13 +100,13 @@ Here, I got to experience both frontend and backend, and it was here that I real
           <h5> 2021-2023 </h5>
           <ul>
             <li>
-             <FiChevronRight style={styleEducation}/> Specialization in Frontend Development.
+             <FiChevronRight className="chevron"/> Specialization in Frontend Development.
             </li>
             <li>
-            <FiChevronRight style={styleEducation}/> Courses: JavaScript 1, 2 & 3, HTML & CSS, Work Methodology 1 & 2, UX & Graphic Tools, Frontend Development, Backend Development, Internship (Vello for 20 weeks).
+            <FiChevronRight className="chevron"/> Courses: JavaScript 1, 2 & 3, HTML & CSS, Work Methodology 1 & 2, UX & Graphic Tools, Frontend Development, Backend Development, Internship (Vello for 20 weeks).
             </li>
             <li>
-            <FiChevronRight style={styleEducation}/> At the end of the course, we had a 20-week internship period where I worked at a Finnish company called "Vello" and became interested in the role of a Frontend Developer, as opposed to pursuing further studies.
+            <FiChevronRight className="chevron"/> At the end of the course, we had a 20-week internship period where I worked at a Finnish company called "Vello" and became interested in the role of a Frontend Developer, as opposed to pursuing further studies.
             </li>
           </ul>
         </div>
@@ -119,20 +117,20 @@ Here, I got to experience both frontend and backend, and it was here that I real
       return (
         <div className="button-output-content">
           <h2>Vello</h2>
-          <h4>Intern</h4>
+          <h4>Internship</h4>
           <h5> 2022-2023 </h5>
           <ul>
             <li>
-             <FiChevronRight style={styleEducation}/> With my previous knowledge, I was able to further develop what was already in place at Vello. This included tasks such as creating new views, designing in Figma, and then developing them on the live server.
+             <FiChevronRight className="chevron"/> With my previous knowledge, I was able to further develop what was already in place at Vello. This included tasks such as creating new views, designing in Figma, and then developing them on the live server.
             </li>
             <li>
-            <FiChevronRight style={styleEducation}/> I gained valuable insights into the work environment at a company and experienced how communication flows.
+            <FiChevronRight className="chevron"/> I gained valuable insights into the work environment at a company and experienced how communication flows.
             </li>
             <li>
-            <FiChevronRight style={styleEducation}/> During my time at Vello, I worked with Backbone, HTML, CSS, JavaScript, Cypress (E2E Testing), Figma, and Linear.
+            <FiChevronRight className="chevron"/> During my time at Vello, I worked with Backbone, HTML, CSS, JavaScript, Cypress (E2E Testing), Figma, and Linear.
             </li>
             <li>
-            <FiChevronRight style={styleEducation}/> I contributed by suggesting new features, conducting bug testing, and participating in development.
+            <FiChevronRight className="chevron"/> I contributed by suggesting new features, conducting bug testing, and participating in development.
             </li>
           </ul>
         </div>
