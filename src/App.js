@@ -9,15 +9,10 @@ import Footer from './components/footer/Footer';
 import Loginpage from './components/loginpage/Loginpage';
 import Adminpage from './components/admin/Admin';
 import Signup from './components/signup/Signup';
-import { Helmet } from 'react-helmet';
 
 function App() {
   return (
     <BrowserRouter>
-      <Helmet>
-        <title>Jesper Sjöström | Frontend Developer</title>
-        <meta name="description" content="I am a frontend developer who loves design and creating websites." />
-      </Helmet>
       <Navbar />
       <Intro />
       <About />
