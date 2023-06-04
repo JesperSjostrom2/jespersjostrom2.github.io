@@ -12,11 +12,13 @@ import Adminpage from './components/admin/Admin';
 import Signup from './components/signup/Signup';
 import NotFound from './notfound/NotFound';
 
-function NotFoundRoutes() {
+function MainLayout(props) {
   return (
-    <Routes>
-      <Route path="*" element={<NotFound />} /> {/* 404 route */}
-    </Routes>
+    <>
+      <Navbar />
+      {props.children}
+      <Footer />
+    </>
   );
 }
 
@@ -24,21 +26,23 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<>
-          <Navbar />
-          <Intro />
-          <About />
-          <Education />
-          <Skills />
-          <Contact />
-          <Footer />
-        </>} />
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <Intro />
+              <About />
+              <Education />
+              <Skills />
+              <Contact />
+            </MainLayout>
+          }
+        />
         <Route path="/login" element={<Loginpage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/admin" element={<Adminpage />} />
+        <Route path="*" element={<NotFound />} /> {/* 404 route */}
       </Routes>
-
-      <NotFoundRoutes /> {/* Include NotFoundRoutes component */}
     </BrowserRouter>
   );
 }
