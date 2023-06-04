@@ -38,6 +38,7 @@ const Navbar = () => {
           Contact
         </a>
         <button className="cv">
+        <a href="https://github.com/jespersjostrom2/my-cv/raw/main/cv.pdf" download="cv.pdf"></a>
           <span>CV</span>
           <i></i>
         </button>

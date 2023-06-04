@@ -63,7 +63,7 @@
     background: #fff;
     transition: 0.5s;
     position: relative;
-    color: #fff;
+    color: var(--color-white);
     border-radius: 0.2rem;
     margin-left: 2rem;
     cursor: pointer;
@@ -72,6 +72,13 @@
     animation-delay: 0.7s;
     font-weight: 600;
     font-size: 1rem;
+  }
+
+  .cv a {
+    all: unset;
+    display: block;
+    text-decoration: none;
+    color: inherit;
   }
   
   .cv:hover {
