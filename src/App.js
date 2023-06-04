@@ -25,15 +25,15 @@ function MainLayout(props) {
 function App() {
   return (
     <BrowserRouter>
-      <Helmet>
-      <title>Jesper Sjöström | Frontend Developer</title>
-      <meta name="description" content="I am a frontend developer who loves design and creating websites." />
-      </Helmet>
-    <Routes>
+      <Routes>
         <Route
           path="/"
           element={
             <>
+              <Helmet>
+                <title>Jesper Sjöström | Frontend Developer</title>
+                <meta name="description" content="I am a frontend developer who loves design and creating websites." />
+              </Helmet>
               <MainLayout>
                 <Intro />
                 <About />
@@ -51,5 +51,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;
