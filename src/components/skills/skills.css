@@ -93,6 +93,12 @@
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .skills-header {
+    font-size: 2.2rem;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   .skills-icons {
       gap: 1rem;

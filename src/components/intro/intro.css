@@ -36,7 +36,6 @@
     animation: slideLeft 0.5s ease forwards;
     opacity: 0;
     animation-delay: 1.3s;
-    padding-right: 2rem;
 }
 
 .btn-cta {
@@ -262,7 +261,7 @@
 
 @media only screen and (max-width: 768px) {
     .intro-container {
-        padding: 70px 2% 0;
+        padding: 70px 5% 0;
         flex-direction: column;
     }
 
@@ -309,6 +308,10 @@
 @media only screen and (max-width: 420px) {
     .about-container .image img {
         top: 80px;
+    }
+
+    .intro-container h1 {
+        font-size: 3rem;
     }
 }
 

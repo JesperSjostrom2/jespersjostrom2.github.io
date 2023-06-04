@@ -11,7 +11,7 @@
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 1.6rem;
     text-decoration: none;
     color: var(--color-white);
     font-weight: 600;
@@ -91,5 +91,6 @@
 
     .navbar a {
         font-size: 1.5rem;
+        padding-left: 3rem;
     }
 }
