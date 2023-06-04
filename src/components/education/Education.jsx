@@ -150,7 +150,7 @@ const Education = () => {
   return (
     <section className="education "id="education">
     <div className="education-container">
-    <h2 className="education-header" data-aos="fade-up" data-aos-delay="100"> My <span> Education </span></h2>
+    <h2 className="education-header" data-aos="fade-up" data-aos-delay="300"> My <span> Education </span></h2>
       <div className="education-content">
         <div className="button-wrapper">
           <ButtonGroup
