@@ -11,6 +11,7 @@ import Loginpage from './components/loginpage/Loginpage';
 import Adminpage from './components/admin/Admin';
 import Signup from './components/signup/Signup';
 import NotFound from './notfound/NotFound';
+import { Helmet } from 'react-helmet';
 
 function MainLayout(props) {
   return (
@@ -25,6 +26,10 @@ function MainLayout(props) {
 function App() {
   return (
     <BrowserRouter>
+     <Helmet>
+        <title>Jesper Sjöström | Frontend Developer </title>
+        <meta name="description" content="I am a frontend developer who loves design and creating websites." />
+      </Helmet>
       <Routes>
         <Route
           path="/"
