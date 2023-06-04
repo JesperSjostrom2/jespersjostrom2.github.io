@@ -26,10 +26,6 @@ function MainLayout(props) {
 function App() {
   return (
     <BrowserRouter>
-     <Helmet>
-        <title>Jesper Sjöström | Frontend Developer </title>
-        <meta name="description" content="I am a frontend developer who loves design and creating websites." />
-      </Helmet>
       <Routes>
         <Route
           path="/"
@@ -46,8 +42,13 @@ function App() {
         <Route path="/login" element={<Loginpage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/admin" element={<Adminpage />} />
-        <Route path="*" element={<NotFound />} /> {/* 404 route */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <Helmet>
+        <title>Jesper Sjöström | Frontend Developer</title>
+        <meta name="description" content="I am a frontend developer who loves design and creating websites." />
+      </Helmet>
     </BrowserRouter>
   );
 }
