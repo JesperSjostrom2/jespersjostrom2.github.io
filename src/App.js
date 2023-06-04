@@ -13,7 +13,7 @@ import Signup from './components/signup/Signup';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/official-portfolio-master/">
       <Routes>
         <Route path="/" element={<>
           <Navbar />
