@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import './signup.css'
 
 function Signup() {
@@ -17,10 +17,10 @@ function Signup() {
               email,password
           })
           .then(res=>{
-              if(res.data=="exist"){
+              if(res.data==="exist"){
                   alert("User already exists")
               }
-              else if(res.data=="notexist"){
+              else if(res.data==="notexist"){
                 alert('User has been created')
                 history("/login",{state:{id:email}})
               }
@@ -55,7 +55,7 @@ function Signup() {
             <i></i>
         </div>
         <div className="links">
-        <a href="/login">Login</a>
+        <Link to="/login">Login</Link>
         </div>
         <input type="submit" value="Sign up" onClick={submit} />
       </form>

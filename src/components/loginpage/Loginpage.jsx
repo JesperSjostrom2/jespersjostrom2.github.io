@@ -1,8 +1,8 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import axios from "axios"
 import './loginpage.css'
-import { useNavigate, Link} from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Loginpage = () => {
 
@@ -20,10 +20,10 @@ const Loginpage = () => {
                 email,password
             })
             .then(res=>{
-                if(res.data=="exist"){
+                if(res.data==="exist"){
                     history("/admin",{state:{id:email}})
                 }
-                else if(res.data=="notexist"){
+                else if(res.data==="notexist"){
                     alert("This user has not signed up")
                 }
             })
@@ -57,8 +57,9 @@ const Loginpage = () => {
             <i></i>
         </div>
         <div className="links">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a href="#">Forgot Password</a>
-          <a href="/signup">Signup</a>
+          <Link to="/signup">Signup</Link>
         </div>
         <input type="submit" value="Login" onClick={submit} />
       </form>
