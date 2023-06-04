@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Intro from './components/intro/Intro';
@@ -11,13 +12,9 @@ import Adminpage from './components/admin/Admin';
 import Signup from './components/signup/Signup';
 import { Helmet } from 'react-helmet';
 
-function App() {
+function MainLayout(props) {
   return (
-    <BrowserRouter>
-      <Helmet>
-        <title>Jesper Sjöström | Frontend Developer</title>
-        <meta name="description" content="I am a frontend developer who loves design and creating websites." />
-      </Helmet>
+    <>
       <Navbar />
       <Intro />
       <About />
@@ -25,7 +22,24 @@ function App() {
       <Skills />
       <Contact />
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Helmet>
+        <title>Jesper Sjöström | Frontend Developer</title>
+        <meta name="description" content="I am a frontend developer who loves design and creating websites." />
+      </Helmet>
       <Routes>
+        <Route
+          path="/"
+          element={
+            <MainLayout />
+          }
+        />
         <Route path="/login" element={<Loginpage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/admin" element={<Adminpage />} />
