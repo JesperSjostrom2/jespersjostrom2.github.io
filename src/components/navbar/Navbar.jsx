@@ -1,41 +1,55 @@
-import React from 'react'
-import './navbar.css'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import { useRef, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
+import './navbar.css';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../../assets/logo.png';
 
 const Navbar = () => {
-  useEffect(() => {
-    document.title = "Jesper Sjostrom | Frontend Developer"
- }, []);
-  const navRef = useRef()
+  const navRef = useRef();
+  const [isOpen, setIsOpen] = useState(false);
 
   const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav")
-  }
+    setIsOpen(!isOpen);
+  };
 
   const closeNavbar = () => {
-    navRef.current.classList.remove('responsive_nav');
+    setIsOpen(false);
   };
 
   return (
-    
     <header className="header">
-        <a href="#home" className="logo"> <span>J</span>esper. </a>
-
-        <nav ref={navRef} className="navbar">
-        <a href="#about" onClick={closeNavbar}>About</a>
-        <a href="#education" onClick={closeNavbar}>Education</a>
-        <a href="#skills" onClick={closeNavbar}>Skills</a>
-        <a href="#contact" onClick={closeNavbar}>Contact</a>
-        <button className="nav-btn nav-close-btn" onClick={showNavbar}> 
-          <FaTimes />
-          </button>
-        </nav>
-        <button className="nav-btn" onClick={showNavbar}>
-        <FaBars/>
+      <a href="#home">
+        <img
+          src={logo}
+          className={`logo ${isOpen ? 'logo-open' : ''}`}
+          alt="logo"
+        />
+      </a>
+      <nav ref={navRef} className={`navbar ${isOpen ? 'responsive_nav' : ''}`}>
+        <a href="#about" onClick={closeNavbar}>
+          About
+        </a>
+        <a href="#education" onClick={closeNavbar}>
+          Education
+        </a>
+        <a href="#skills" onClick={closeNavbar}>
+          Skills
+        </a>
+        <a href="#contact" onClick={closeNavbar}>
+          Contact
+        </a>
+        <button className="cv">
+          <span>CV</span>
+          <i></i>
         </button>
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+          <FaTimes />
+        </button>
+      </nav>
+      <button className="nav-btn" onClick={showNavbar}>
+        <FaBars />
+      </button>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
