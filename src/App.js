@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Intro from './components/intro/Intro';
 import About from './components/about/About';
@@ -20,18 +20,19 @@ function App() {
         <title>Jesper Sjöström | Frontend Developer</title>
         <meta name="description" content="I am a frontend developer who loves design and creating websites." />
       </Helmet>
+      <Navbar />
+      <Outlet /> {/* Render nested routes */}
+      <Footer />
       <Routes>
         <Route
           path="/"
           element={
             <>
-              <Navbar />
               <Intro />
               <About />
               <Education />
               <Skills />
               <Contact />
-              <Footer />
             </>
           }
         />
