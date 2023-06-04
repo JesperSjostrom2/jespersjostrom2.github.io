@@ -9,7 +9,7 @@ const styleEducation = { color: "#F06"}
 
 function ButtonGroup({ selectedButton, handleButtonClick }) {
   return (
-    <div className="education-buttons" data-aos="fade-right" data-aos-delay="300">
+    <div className="education-buttons" data-aos="fade-right" data-aos-delay="100">
       <button
         className={selectedButton === 'button1' ? 'selected' : ''}
         onClick={() => handleButtonClick('button1')}
@@ -48,20 +48,20 @@ function ButtonOutput({ selectedButton }) {
         
         //HUDDINGE GYMNASIET
         <div className="button-output-content">
-          <h2 data-aos="fade-right" data-aos-delay="200">Huddinge gymnasiet</h2>
-          <h4 data-aos="fade-right" data-aos-delay="300">Student</h4>
-          <h5 data-aos="fade-right" data-aos-delay="400"> 2016-2019 </h5>
+          <h2 data-aos="fade-right" data-aos-delay="100">Huddinge gymnasiet</h2>
+          <h4 data-aos="fade-right" data-aos-delay="150">Student</h4>
+          <h5 data-aos="fade-right" data-aos-delay="200"> 2016-2019 </h5>
           <ul>
-            <li data-aos="fade-right" data-aos-delay="500">
+            <li data-aos="fade-right" data-aos-delay="250">
              <FiChevronRight style={styleEducation}/> Specialization in Information and Media Technology.
             </li>
-            <li data-aos="fade-right" data-aos-delay="600">
+            <li data-aos="fade-right" data-aos-delay="300">
             <FiChevronRight style={styleEducation}/> Introduction to HTML, CSS & Javascript.
             </li>
-            <li data-aos="fade-right" data-aos-delay="700">
+            <li data-aos="fade-right" data-aos-delay="350">
             <FiChevronRight style={styleEducation}/> Courses: Computer Technology, Digital Creation, Interface Design, Programming (Java), Technology, Web Server Programming, Web Development.
             </li>
-            <li data-aos="fade-right" data-aos-delay="800">
+            <li data-aos="fade-right" data-aos-delay="400">
             <FiChevronRight style={styleEducation}/> The interest in web development & design began here.
             </li>
           </ul>

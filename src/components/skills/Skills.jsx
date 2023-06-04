@@ -58,11 +58,11 @@ const Skills = () => {
           <h1 className="skills-header" data-aos="fade-up" data-aos-delay="100">
             My <span>Skills</span>
           </h1>
-          <h3 className="skills-technologies" data-aos="fade-up" data-aos-delay="200">
+          <h3 className="skills-technologies" data-aos="fade-up" data-aos-delay="150">
           I have experience with the following technologies.
           </h3>
 
-          <div className="skills-icons" data-aos="fade-up" data-aos-delay="600">
+          <div className="skills-icons" data-aos="fade-up" data-aos-delay="250">
             <div className="box-box">
               <DiJavascript1 className="icons-css" />
               <h3>Javascript</h3>
