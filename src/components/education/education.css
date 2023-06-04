@@ -31,7 +31,7 @@
 
 .education-buttons button {
   display: block;
-  color: white;
+  color: #7E7E7E;
   background: transparent;
   font-size: 1.125rem;
   font-weight: 500;
@@ -45,9 +45,9 @@
 }
 
 .education-buttons .selected {
-  color: var(--color-main);
+  color: var(--color-white);
   width: 30px;
-  border-left: 2px solid;
+  border-left: 2px solid #f06;
   padding-left: 1rem;
   animation: slideRightVariant 1s ease forwards;
 }
@@ -148,7 +148,7 @@
     transform: translateX(-50%);
     height: 1px;
     width: 80%;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid #f06;
   }
 
   .button-output-content {
