@@ -47,7 +47,7 @@
 .education-buttons .selected {
   color: var(--color-main);
   width: 30px;
-  border-left: 2px solid lightgray;
+  border-left: 2px solid;
   padding-left: 1rem;
   animation: slideRightVariant 1s ease forwards;
 }
@@ -105,6 +105,7 @@
 @media only screen and (max-width: 700px) {
   .button-wrapper {
     flex-direction: column;
+    overflow-x: scroll;
   }
 
   .education-buttons {
@@ -113,15 +114,17 @@
     margin-top: 4rem;
     flex-direction: unset;
     margin: unset;
-    flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 2rem;
+    overflow-x: scroll;
+    justify-content: flex-start;
   }
 
   .education-buttons button {
     padding-right: 2rem;
     flex: unset;
     max-width: 1rem;
+    overflow-x: scroll;
   }
 
   .education-buttons .selected {
@@ -135,7 +138,7 @@
     left: 0;
     height: 1px;
     width: 80%;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 2px solid;
   }
 
   .button-output-content {
@@ -143,11 +146,11 @@
     flex: unset;
   }
 
-  .button-output-content h2{
+  .button-output-content h2 {
     font-size: 1.3rem;
   }
 
-  .button-output-content h4{
+  .button-output-content h4 {
     font-size: 1.1rem;
   }
 
