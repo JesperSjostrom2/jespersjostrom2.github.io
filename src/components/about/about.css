@@ -84,10 +84,7 @@
 }
 
 p span {
-    background: linear-gradient(15deg, #f06, #3cf);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-main);
 }
 
 @media only screen and (max-width: 1500px) {
