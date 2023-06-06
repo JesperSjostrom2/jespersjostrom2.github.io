@@ -38,9 +38,10 @@ const Navbar = () => {
           Contact
         </a>
         <button className="cv">
-        <a href="https://github.com/jespersjostrom2/my-cv/raw/main/cv.pdf" download="cv.pdf"></a>
+        <a href="https://github.com/jespersjostrom2/my-cv/raw/main/cv.pdf" download="cv.pdf">
           <span>Download CV</span>
           <i></i>
+          </a>
         </button>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
