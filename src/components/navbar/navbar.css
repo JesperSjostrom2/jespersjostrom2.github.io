@@ -28,21 +28,33 @@
   
   .navbar a {
     font-size: 1.2rem;
-    color: var(--color-white);
+    color: lightgray;
     font-weight: 700;
     margin-left: 3rem;
+    padding: 0 10px;
     transition: 0.3s;
     animation: slideTop 0.5s ease forwards;
     opacity: 0;
     animation-delay: 0.7s;
   }
-  
-  .navbar a:hover {
-    background: linear-gradient(30deg, #f06, #3cf);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
+
+  .navbar a:after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-main);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    color: var(--color-white);
+  }
+
+  a:hover:after {
+    width: 100%;
   }
   
   .nav-btn {
@@ -56,7 +68,7 @@
     opacity: 0;
     font-size: 1.8rem;
   }
-  
+
   .cv {
     padding: 10px 30px;
     background: #fff;
@@ -82,7 +94,11 @@
     color: var(--color-main);
     box-shadow: 0 0 35px var(--color-main);
   }
-  
+
+  .cv a:after {
+    all: unset;
+  }
+
   .cv:before {
     content: '';
     position: absolute;
@@ -135,6 +151,7 @@
     width: 20px;
     left: 80%;
   }
+
 
   .logo-open {
     position: absolute;
