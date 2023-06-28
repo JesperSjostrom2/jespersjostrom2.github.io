@@ -12,25 +12,25 @@ function ButtonGroup({ selectedButton, handleButtonClick }) {
         className={selectedButton === 'button1' ? 'selected' : ''}
         onClick={() => handleButtonClick('button1')}
       >
-        Huddinge gymnasiet
+        Vello
       </button>
       <button
         className={selectedButton === 'button2' ? 'selected' : ''}
         onClick={() => handleButtonClick('button2')}
       >
-        Östra gymnasiet
+        KYH Yrkeshögskola
       </button>
       <button
         className={selectedButton === 'button3' ? 'selected' : ''}
         onClick={() => handleButtonClick('button3')}
       >
-        KYH Yrkeshögskola
+        Östra Gymnasiet
       </button>
       <button
         className={selectedButton === 'button4' ? 'selected' : ''}
         onClick={() => handleButtonClick('button4')}
       >
-        Vello
+        Huddinge gymnasiet
       </button>
     </div>
   );
@@ -43,56 +43,30 @@ function ButtonOutput({ selectedButton }) {
   switch (selectedButton) {
     case 'button1':
       return (
-        
-        //HUDDINGE GYMNASIET
         <div className="button-output-content">
-          <h2 data-aos="fade-right" data-aos-delay="100">Huddinge gymnasiet</h2>
-          <h4 data-aos="fade-right" data-aos-delay="150">Student</h4>
-          <h5 data-aos="fade-right" data-aos-delay="200"> 2016-2019 </h5>
+          <h2 data-aos="fade-right" data-aos-delay="100">Vello</h2>
+          <h4 data-aos="fade-right" data-aos-delay="150">Internship</h4>
+          <h5 data-aos="fade-right" data-aos-delay="200"> 2022-2023 </h5>
           <ul>
             <li data-aos="fade-right" data-aos-delay="250">
-             <FiChevronRight className="chevron"/> Specialization in Information and Media Technology.
+             <FiChevronRight className="chevron"/> With my previous knowledge, I was able to further develop what was already in place at Vello. This included tasks such as creating new views, designing in Figma, and then developing them on the live server.
             </li>
             <li data-aos="fade-right" data-aos-delay="300">
-            <FiChevronRight className="chevron"/> Introduction to HTML, CSS & Javascript.
+            <FiChevronRight className="chevron"/> I gained valuable insights into the work environment at a company and experienced how communication flows.
             </li>
             <li data-aos="fade-right" data-aos-delay="350">
-            <FiChevronRight className="chevron"/> Courses: Computer Technology, Digital Creation, Interface Design, Programming (Java), Technology, Web Server Programming, Web Development.
+            <FiChevronRight className="chevron"/> During my time at Vello, I worked with Backbone, HTML, CSS, JavaScript, Cypress (E2E Testing), Figma, and Linear.
             </li>
             <li data-aos="fade-right" data-aos-delay="400">
-            <FiChevronRight className="chevron"/> The interest in web development & design began here.
-            </li>
-          </ul>
-        </div>
-    );
-
-      //ÖSTRA GYMNASIET
-    case 'button2':
-      return (
-        <div className="button-output-content">
-          <h2>Östra gymnasiet</h2>
-          <h4>High School Engineer.</h4>
-          <h5> 2019-2020 </h5>
-          <ul>
-            <li>
-             <FiChevronRight className="chevron"/> Specialization in Web Development.
-            </li>
-            <li>
-            <FiChevronRight className="chevron"/> Programming 2 & 3 (C# & JS)
-            </li>
-            <li>
-            <FiChevronRight className="chevron"/> Software Design, Data Storage, Interface Design, Technology, Internship, Exam work.
-            </li>
-            <li>
-            <FiChevronRight className="chevron"/> Mainly focused on frontend development but also learning how backend works
-Here, I got to experience both frontend and backend, and it was here that I realized I had more interest in design and frontend development compared to backend.
+            <FiChevronRight className="chevron"/> I contributed by suggesting new features, conducting bug testing, and participating in development.
             </li>
           </ul>
         </div>
       );
-      
-      // KYH YRKESHÖGSKOLA
-    case 'button3':
+
+
+      //ÖSTRA GYMNASIET
+    case 'button2':
       return (
         <div className="button-output-content">
           <h2>KYH Yrkeshögskola</h2>
@@ -112,29 +86,57 @@ Here, I got to experience both frontend and backend, and it was here that I real
         </div>
       );
 
-      // VELLO
-    case 'button4':
+      
+      // KYH YRKESHÖGSKOLA
+    case 'button3':
       return (
         <div className="button-output-content">
-          <h2>Vello</h2>
-          <h4>Internship</h4>
-          <h5> 2022-2023 </h5>
+          <h2>Östra gymnasiet</h2>
+          <h4>High School Engineer.</h4>
+          <h5> 2019-2020 </h5>
           <ul>
             <li>
-             <FiChevronRight className="chevron"/> With my previous knowledge, I was able to further develop what was already in place at Vello. This included tasks such as creating new views, designing in Figma, and then developing them on the live server.
+             <FiChevronRight className="chevron"/> Specialization in Web Development.
             </li>
             <li>
-            <FiChevronRight className="chevron"/> I gained valuable insights into the work environment at a company and experienced how communication flows.
+            <FiChevronRight className="chevron"/> Programming 2 & 3 (C# & JS)
             </li>
             <li>
-            <FiChevronRight className="chevron"/> During my time at Vello, I worked with Backbone, HTML, CSS, JavaScript, Cypress (E2E Testing), Figma, and Linear.
+            <FiChevronRight className="chevron"/> Software Design, Data Storage, Interface Design, Technology, Internship, Exam work.
             </li>
             <li>
-            <FiChevronRight className="chevron"/> I contributed by suggesting new features, conducting bug testing, and participating in development.
+            <FiChevronRight className="chevron"/> Mainly focused on frontend development but also learning how backend works
+            Here, I got to experience both frontend and backend, and it was here that I realized I had more interest in design and frontend development compared to backend.
             </li>
           </ul>
         </div>
       );
+
+      // VELLO
+    case 'button4':
+      return (
+        
+        //HUDDINGE GYMNASIET
+        <div className="button-output-content">
+          <h2>Huddinge gymnasiet</h2>
+          <h4>Student</h4>
+          <h5> 2016-2019 </h5>
+          <ul>
+            <li>
+             <FiChevronRight className="chevron"/> Specialization in Information and Media Technology.
+            </li>
+            <li>
+            <FiChevronRight className="chevron"/> Introduction to HTML, CSS & Javascript.
+            </li>
+            <li>
+            <FiChevronRight className="chevron"/> Courses: Computer Technology, Digital Creation, Interface Design, Programming (Java), Technology, Web Server Programming, Web Development.
+            </li>
+            <li>
+            <FiChevronRight className="chevron"/> The interest in web development & design began here.
+            </li>
+          </ul>
+        </div>
+    );
     default:
       return null;
   }
