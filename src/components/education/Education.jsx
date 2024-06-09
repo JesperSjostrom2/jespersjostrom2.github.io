@@ -12,7 +12,7 @@ function ButtonGroup({ selectedButton, handleButtonClick }) {
         className={selectedButton === 'button0' ? 'selected' : ''}
         onClick={() => handleButtonClick('button0')}
       >
-        Cafe Bistro Kerma
+        Cafe & Bistro Kerma
       </button>
       <button
         className={selectedButton === 'button1' ? 'selected' : ''}
