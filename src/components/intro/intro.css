@@ -217,6 +217,11 @@
     object-fit: cover;
 }
 
+.intro-img:hover, .intro-glowing-circle:hover, .intro-glowing-circle span:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
 @media only screen and (max-width: 1200px) {
     .intro-glowing-circle {
         transform: scale(0.9);
@@ -258,6 +263,10 @@
         width: 12rem;
         height: 4rem;
     }
+
+    .intro-img:hover, .intro-glowing-circle:hover, .intro-glowing-circle span:hover {
+        transform: scale(0.9);
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -298,6 +307,10 @@
     }
     .intro-glowing-circle span {
         height: 105%;
+    }
+
+    .intro-img:hover, .intro-glowing-circle:hover, .intro-glowing-circle span:hover {
+        transform: scale(0.75);
     }
 }
 
