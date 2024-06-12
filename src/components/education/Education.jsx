@@ -77,7 +77,7 @@ function ButtonOutput({ selectedButton }) {
       return (
         <div className="button-output-content">
           <h2 data-aos="fade-right" data-aos-delay="100">Vello</h2>
-          <h4 data-aos="fade-right" data-aos-delay="150">Internship</h4>
+          <h4 data-aos="fade-right" data-aos-delay="150">Web developer Internship</h4>
           <h5 data-aos="fade-right" data-aos-delay="200"> 2022-2023 </h5>
           <ul>
             <li data-aos="fade-right" data-aos-delay="250">
@@ -175,7 +175,7 @@ function ButtonOutput({ selectedButton }) {
 }
 
 const Education = () => {
-  const [selectedButton, setSelectedButton] = useState('button1');
+  const [selectedButton, setSelectedButton] = useState('button0');
 
   const handleButtonClick = (buttonId) => {
     setSelectedButton(buttonId);
