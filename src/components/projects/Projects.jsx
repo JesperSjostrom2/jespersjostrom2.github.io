@@ -23,21 +23,33 @@ const Projects = () => {
       <div className="header-card">
         <img src={kermapng} alt="kerma" />
         <div className="card-text">Cafe & Bistro Kerma</div>
+        <div className="project-link">
+        <a href="https://www.tahkonkerma.fi/closed" target="_blank" rel="noopener noreferrer">View project</a>
+        </div>
       </div>
 
       <div className="sub-card">
         <img src={kermapng} alt="sub1" />
         <div className="card-text">Sub Card 1</div>
+        <div className="project-link">
+        <a href="https://www.tahkonkerma.fi/closed" target="_blank" rel="noopener noreferrer">View project</a>
+        </div>
       </div>
 
       <div className="sub-card">
         <img src={kermapng} alt="sub2" />
         <div className="card-text">Sub Card 2</div>
+        <div className="project-link">
+        <a href="https://www.tahkonkerma.fi/closed" target="_blank" rel="noopener noreferrer">View project</a>
+        </div>
       </div>
 
       <div className="sub-card">
         <img src={kermapng} alt="sub3" />
         <div className="card-text">Sub Card 3</div>
+        <div className="project-link">
+        <a href="https://www.tahkonkerma.fi/closed" target="_blank" rel="noopener noreferrer">View project</a>
+        </div>
       </div>
     </div>
   </div>
