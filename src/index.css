@@ -21,7 +21,7 @@ html {
     --color-bg-main: #000;
     --color-bg-intro: linear-gradient(180deg, #0D0D0D 0%, #28262F 100%);
     --color-bg-variant: #171717;
-    --color-bg-education: linear-gradient(180deg, #28262F 0%, #151515 100%);
+    --color-bg-education: linear-gradient(220deg, #28262F 0%, #151515 100%);
     --color-bg-skills: linear-gradient(180deg, #161616 10.94%, #28262F 54.69%, #191919 100%);
 
     --color-white: #fff;
