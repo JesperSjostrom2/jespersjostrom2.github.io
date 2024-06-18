@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import './projects.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import kermapng from '../../assets/kermaprojects.png';
+import kermapng from '../../assets/kermabg.JPG';
+import github from '../../assets/github.png'
 import { FaArrowRight } from "react-icons/fa";
 
 const Projects = () => {
@@ -32,36 +33,39 @@ const Projects = () => {
             </div>
           </div>
 
+          <div className="other-projects">
+            <h1>
+              School Projects
+            </h1>
+          </div>
+
           <div className="sub-card">
-            <div className="image-container">
-              <img src={kermapng} alt="sub1" />
-              <div className="image-overlay"></div>
+            <div className="image-container-sub">
+              <img src={github} alt="project1" />
             </div>
-            <div className="card-text">Sub Card 1</div>
+            <div className="card-text">Blogify</div>
             <div className="project-link">
-              <a href="https://www.tahkonkerma.fi/closed" target="_blank" rel="noopener noreferrer">View project <FaArrowRight className="arrow-icon" /></a>
+              <a href="https://github.com/JesperSjostrom2/JS3Project" target="_blank" rel="noopener noreferrer">View project <FaArrowRight className="arrow-icon" /></a>
             </div>
           </div>
 
           <div className="sub-card">
-            <div className="image-container">
-              <img src={kermapng} alt="sub2" />
-              <div className="image-overlay"></div>
+            <div className="image-container-sub">
+              <img src={github} alt="project2" />
             </div>
-            <div className="card-text">Sub Card 2</div>
+            <div className="card-text">Mern project</div>
             <div className="project-link">
-              <a href="https://www.tahkonkerma.fi/closed" target="_blank" rel="noopener noreferrer">View project <FaArrowRight className="arrow-icon" /></a>
+              <a href="https://github.com/JesperSjostrom2/js3-mern" target="_blank" rel="noopener noreferrer">View project <FaArrowRight className="arrow-icon" /></a>
             </div>
           </div>
 
           <div className="sub-card">
-            <div className="image-container">
-              <img src={kermapng} alt="sub3" />
-              <div className="image-overlay"></div>
+            <div className="image-container-sub">
+              <img src={github} alt="project3" />
             </div>
-            <div className="card-text">Sub Card 3</div>
+            <div className="card-text">Old portfolio</div>
             <div className="project-link">
-              <a href="https://www.tahkonkerma.fi/closed" target="_blank" rel="noopener noreferrer">View project <FaArrowRight className="arrow-icon" /></a>
+              <a href="https://github.com/JesperSjostrom2/portfolio-react" target="_blank" rel="noopener noreferrer">View project <FaArrowRight className="arrow-icon" /></a>
             </div>
           </div>
         </div>
