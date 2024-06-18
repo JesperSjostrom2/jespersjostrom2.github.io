@@ -44,6 +44,7 @@ const Navbar = () => {
       <nav ref={navRef} className={`navbar ${isOpen ? 'responsive_nav' : ''}`}>
         <a href="#about" onClick={closeNavbar}>About</a>
         <a href="#education" onClick={closeNavbar}>Education</a>
+        <a href="#projects" onClick={closeNavbar}>Projects</a>
         <a href="#skills" onClick={closeNavbar}>Skills</a>
         <a href="#contact" onClick={closeNavbar}>Contact</a>
         <button className="cv">
