@@ -9,6 +9,7 @@ import Footer from './components/footer/Footer';
 import Loginpage from './components/loginpage/Loginpage';
 import Adminpage from './components/admin/Admin';
 import Signup from './components/signup/Signup';
+import Projects from './components/projects/Projects';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Intro />
       <About />
       <Education />
+      <Projects />
       <Skills />
       <Contact />
       <Footer />

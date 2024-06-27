@@ -9,6 +9,12 @@ function ButtonGroup({ selectedButton, handleButtonClick }) {
   return (
     <div className="education-buttons" data-aos="fade-right" data-aos-delay="100">
       <button
+        className={selectedButton === 'button0' ? 'selected' : ''}
+        onClick={() => handleButtonClick('button0')}
+      >
+        Cafe & Bistro Kerma
+      </button>
+      <button
         className={selectedButton === 'button1' ? 'selected' : ''}
         onClick={() => handleButtonClick('button1')}
       >
@@ -41,11 +47,37 @@ function ButtonOutput({ selectedButton }) {
     AOS.init({duration: 1000});
   }, []);
   switch (selectedButton) {
+    
+    case 'button0':
+      return (
+        <div className="button-output-content">
+          <h2 data-aos="fade-right" data-aos-delay="100">Cafe & Bistro Kerma</h2>
+          <h4 data-aos="fade-right" data-aos-delay="150">Worker & Web Developer</h4>
+          <h5 data-aos="fade-right" data-aos-delay="200"> 2023 - 2024 </h5>
+          <ul>
+            <li data-aos="fade-right" data-aos-delay="250">
+             <FiChevronRight className="chevron"/> At Café & Bistro Kerma, I was an all-around worker responsible for a wide range of tasks including inventory management, serving food, cooking, and working at the bar.
+            </li>
+            <li data-aos="fade-right" data-aos-delay="300">
+            <FiChevronRight className="chevron"/> I designed and developed the website, creating a user-friendly platform with an online menu and reservation system.
+            </li>
+            <li data-aos="fade-right" data-aos-delay="350">
+            <FiChevronRight className="chevron"/> In addition to the website I also designed and created the logotype, creating an easy and simple logo to recognize.
+            </li>
+            <li data-aos="fade-right" data-aos-delay="400">
+            <FiChevronRight className="chevron"/> I had close contact with my customer to ensure they were satisfied with the logotype and website I created. By actively seeking and incorporating their feedback, I was able to refine the brand identity and online presence to better meet their needs and preferences.
+            </li>
+          </ul>
+        </div>
+      );
+
+
+    //Vello
     case 'button1':
       return (
         <div className="button-output-content">
           <h2 data-aos="fade-right" data-aos-delay="100">Vello</h2>
-          <h4 data-aos="fade-right" data-aos-delay="150">Internship</h4>
+          <h4 data-aos="fade-right" data-aos-delay="150">Web developer Internship</h4>
           <h5 data-aos="fade-right" data-aos-delay="200"> 2022-2023 </h5>
           <ul>
             <li data-aos="fade-right" data-aos-delay="250">
@@ -106,7 +138,7 @@ function ButtonOutput({ selectedButton }) {
             </li>
             <li>
             <FiChevronRight className="chevron"/> Mainly focused on frontend development but also learning how backend works
-            Here, I got to experience both frontend and backend, and it was here that I realized I had more interest in design and frontend development compared to backend.
+            here, I got to experience both frontend and backend, and it was here that I realized I had more interest in design and frontend development compared to backend.
             </li>
           </ul>
         </div>
@@ -143,7 +175,7 @@ function ButtonOutput({ selectedButton }) {
 }
 
 const Education = () => {
-  const [selectedButton, setSelectedButton] = useState('button1');
+  const [selectedButton, setSelectedButton] = useState('button0');
 
   const handleButtonClick = (buttonId) => {
     setSelectedButton(buttonId);
@@ -152,7 +184,7 @@ const Education = () => {
   return (
     <section className="education "id="education">
     <div className="education-container">
-    <h2 className="education-header" data-aos="fade-up" data-aos-delay="300"> My <span> Education </span></h2>
+    <h2 className="education-header" data-aos="fade-up" data-aos-delay="300"> My <span> Education / Work </span> </h2>
       <div className="education-content">
         <div className="button-wrapper">
           <ButtonGroup
