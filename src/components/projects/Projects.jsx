@@ -23,7 +23,7 @@ const Projects = () => {
 
         <div className="card-container">
           <div className="header-card" data-aos="fade-up" data-aos-delay="150">
-            <a href="https://www.tahkonkerma.fi/closed" target="_blank" rel="noopener noreferrer" >
+            <a href="https://www.tahkonkerma.fi" target="_blank" rel="noopener noreferrer" >
               <div className="image-container">
                 <img src={kermapng} alt="kerma" />
                 <div className="image-overlay"></div>
