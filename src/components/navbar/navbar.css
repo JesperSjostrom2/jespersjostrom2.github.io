@@ -73,19 +73,6 @@
   transform: scale(1.02);
 }
 
-.logo-open {
-  position: absolute;
-  top: 50%;
-  left: 49.5%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 4rem;
-  height: auto;
-  background-color: var(--color-main);
-  padding: 0.5rem;
-  border-radius: 1rem;
-}
-
 @media only screen and (max-width: 1024px) {
   .nav-btn {
     visibility: visible;
