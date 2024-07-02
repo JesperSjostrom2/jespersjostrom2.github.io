@@ -50,21 +50,21 @@ function ButtonOutput({ selectedButton }) {
     
     case 'button0':
       return (
-        <div className="button-output-content">
-          <h2 data-aos="fade-right" data-aos-delay="100">Cafe & Bistro Kerma</h2>
-          <h4 data-aos="fade-right" data-aos-delay="150">Worker & Web Developer</h4>
-          <h5 data-aos="fade-right" data-aos-delay="200"> 2023 - 2024 </h5>
+        <div className="button-output-content" data-aos="fade-right" data-aos-delay="200">
+          <h2>Cafe & Bistro Kerma</h2>
+          <h4>Worker & Web Developer</h4>
+          <h5> 2023 - 2024 </h5>
           <ul>
-            <li data-aos="fade-right" data-aos-delay="250">
+            <li>
              <FiChevronRight className="chevron"/> At Café & Bistro Kerma, I was an all-around worker responsible for a wide range of tasks including inventory management, serving food, cooking, and working at the bar.
             </li>
-            <li data-aos="fade-right" data-aos-delay="300">
+            <li>
             <FiChevronRight className="chevron"/> I designed and developed the website, creating a user-friendly platform with an online menu and reservation system.
             </li>
-            <li data-aos="fade-right" data-aos-delay="350">
+            <li>
             <FiChevronRight className="chevron"/> In addition to the website I also designed and created the logotype, creating an easy and simple logo to recognize.
             </li>
-            <li data-aos="fade-right" data-aos-delay="400">
+            <li>
             <FiChevronRight className="chevron"/> I had close contact with my customer to ensure they were satisfied with the logotype and website I created. By actively seeking and incorporating their feedback, I was able to refine the brand identity and online presence to better meet their needs and preferences.
             </li>
           </ul>
@@ -76,20 +76,20 @@ function ButtonOutput({ selectedButton }) {
     case 'button1':
       return (
         <div className="button-output-content">
-          <h2 data-aos="fade-right" data-aos-delay="100">Vello</h2>
-          <h4 data-aos="fade-right" data-aos-delay="150">Web developer Internship</h4>
-          <h5 data-aos="fade-right" data-aos-delay="200"> 2022-2023 </h5>
+          <h2>Vello</h2>
+          <h4>Web developer Internship</h4>
+          <h5> 2022-2023 </h5>
           <ul>
-            <li data-aos="fade-right" data-aos-delay="250">
+            <li>
              <FiChevronRight className="chevron"/> With my previous knowledge, I was able to further develop what was already in place at Vello. This included tasks such as creating new views, designing in Figma, and then developing them on the live server.
             </li>
-            <li data-aos="fade-right" data-aos-delay="300">
+            <li>
             <FiChevronRight className="chevron"/> I gained valuable insights into the work environment at a company and experienced how communication flows.
             </li>
-            <li data-aos="fade-right" data-aos-delay="350">
+            <li>
             <FiChevronRight className="chevron"/> During my time at Vello, I worked with Backbone, HTML, CSS, JavaScript, Cypress (E2E Testing), Figma, and Linear.
             </li>
-            <li data-aos="fade-right" data-aos-delay="400">
+            <li>
             <FiChevronRight className="chevron"/> I contributed by suggesting new features, conducting bug testing, and participating in development.
             </li>
           </ul>

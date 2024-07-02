@@ -5,7 +5,6 @@
   background: var(--color-bg-education);
   justify-content: center;
   align-items: center;
-
 }
 
 .education-content {
@@ -69,6 +68,22 @@
   margin-right: 4rem;
   border-radius: 0.5rem;
   padding-top: 1rem;
+  overflow-x: auto;
+  position: relative;
+}
+
+/* Scrollbar styles */
+.education-buttons::-webkit-scrollbar {
+  height: 4px;
+}
+
+.education-buttons::-webkit-scrollbar-thumb {
+  background-color: var(--color-main);
+  border-radius: 4px;
+}
+
+.education-buttons::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
 }
 
 .button-wrapper {
@@ -126,6 +141,7 @@
     overflow-x: scroll;
     justify-content: flex-start;
     text-align: center;
+    position: relative;
   }
 
   .education-buttons button {
@@ -148,7 +164,6 @@
     transform: translateX(-50%);
     height: 1px;
     width: 80%;
-    border-bottom: 2px solid #f06;
   }
 
   .button-output-content {
