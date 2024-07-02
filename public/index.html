@@ -5,39 +5,52 @@
     <link rel="icon" href="%PUBLIC_URL%/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+
+    <!-- Meta Tags -->
     <meta
       name="description"
-      content="I am a frontend developer who loves design and creating websites."
+      content="Jesper Sjöström - Frontend Developer who loves design and creating websites."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="keywords" content="Jesper Sjostrom portfolio, Web Developer Jesper, Portfolio, Jesper sjöström, Jesper Sjöström portfolio, jesper sjöström frontend developer, Jesper web developer" />
+    <meta name="author" content="Jesper Sjöström" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Jesper Sjöström | Frontend Developer" />
+    <meta property="og:description" content="Jesper Sjöström - Frontend Developer who loves design and creating websites." />
+    <meta property="og:image" content="%PUBLIC_URL%/logo.png" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jesper Sjöström | Frontend Developer" />
+    <meta name="twitter:description" content="Jesper Sjöström - Frontend Developer who loves design and creating websites." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/logo.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jesper Sjöström",
+      "jobTitle": "Frontend Developer",
+      "description": "I am a frontend developer who loves design and creating websites.",
+      "url": "jespersjostrom.se",
+      "sameAs": [
+        "https://www.linkedin.com/in/jesper-sj%C3%B6str%C3%B6m-521995232/",
+        "https://github.com/jespersjostrom2"
+      ]
+    }
+    </script>
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Title Tag -->
     <title>Jesper Sjöström | Frontend Developer</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
