@@ -83,6 +83,17 @@
     animation: none;
 }
 
+.about-content ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .about-content li {
+    margin-left: 10px;
+    list-style-type: disc;
+    padding: 0.4rem 0;
+  }
+
 p span {
     color: var(--color-main);
 }
