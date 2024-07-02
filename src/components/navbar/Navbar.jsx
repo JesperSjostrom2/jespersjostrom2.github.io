@@ -48,7 +48,7 @@ const Navbar = () => {
         <a href="#skills" onClick={closeNavbar}>Skills</a>
         <a href="#contact" onClick={closeNavbar}>Contact</a>
         <button className="cv">
-          <a href="https://github.com/jespersjostrom2/my-cv/raw/main/cv.pdf" download="cv.pdf">
+          <a href="https://github.com/jespersjostrom2/my-cv/raw/main/updatedcv.pdf" download="cv.pdf">
             <span>Download CV</span>
             <i></i>
           </a>
