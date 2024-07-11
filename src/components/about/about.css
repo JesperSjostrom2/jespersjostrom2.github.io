@@ -20,11 +20,15 @@
 }
 
 .about-content h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    text-align: left;
+    color: lightgray;
+    font-weight: 200;
 }
 
 .about-content p {
     margin: 2rem 0 2rem;
+    text-align: left;
 }
 
 .about-img img {
