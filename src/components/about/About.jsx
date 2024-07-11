@@ -22,7 +22,7 @@ const About = () => {
           </div>
         <div className="about-content">
         <h2 className="heading" data-aos="fade-up" data-aos-delay="100"> My <span> Journey </span></h2>
-        <h3 data-aos="fade-up" data-aos-delay="150"> Jesper Sjöström - 24 y/o - Stockholm / Helsinki </h3>
+        <h3 data-aos="fade-up" data-aos-delay="150"> Jesper Sjöström, Stockholm / Helsinki </h3>
         <p data-aos="fade-up" data-aos-delay="200">
           My journey in <span>web development</span> has been a progression of discovery:
           <ul><li>At Huddinge Gymnasiet, I studied Informatics and Media Technology for 3 years, sparking my interest in programming.
