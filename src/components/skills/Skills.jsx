@@ -9,9 +9,6 @@ import { FaReact } from 'react-icons/fa';
 import { FaNodeJs } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
 import { FaBootstrap } from 'react-icons/fa';
-import { SiMicrosoftazure } from 'react-icons/si';
-import { DiMongodb } from 'react-icons/di';
-import { FaAws } from 'react-icons/fa';
 import { DiHeroku } from 'react-icons/di';
 import { TbBrandCypress } from 'react-icons/tb';
 import { SiPostman } from 'react-icons/si';
@@ -100,18 +97,6 @@ const Skills = () => {
               <>
               
                 
-                <div className="box-box">
-                  <SiMicrosoftazure className="icons-css" />
-                  <h3>Azure</h3>
-                </div>
-                <div className="box-box">
-                  <DiMongodb className="icons-css" />
-                  <h3>MongoDB</h3>
-                </div>
-                <div className="box-box">
-                  <FaAws className="icons-css" />
-                  <h3>AWS</h3>
-                </div>
                 <div className="box-box">
                   <DiHeroku className="icons-css" />
                   <h3>Heroku</h3>
