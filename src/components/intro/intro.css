@@ -37,6 +37,7 @@
     animation: slideLeft 0.5s ease forwards;
     opacity: 0;
     animation-delay: 1.3s;
+    margin-right: 1.2rem;
 }
 
 .btn-cta {
