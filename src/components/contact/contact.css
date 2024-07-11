@@ -44,6 +44,7 @@
 .short-info {
   margin: 0 auto;
   max-width: 50rem;
+  text-align: left;
 }
 
 .contact form {
