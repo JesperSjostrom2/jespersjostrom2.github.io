@@ -2,12 +2,81 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0;url=/index.html" />
-    <script>
-      window.location.href = "/index.html";
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 - Page Not Found</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(180deg, #0D0D0D 0%, #28262F 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+      }
+
+      .container {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      h1 {
+        font-size: 8rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(30deg, #f06, #3cf);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: #e4e6eb;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: linear-gradient(45deg, #f06, #3cf);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 40px;
+        font-weight: 600;
+        transition: transform 0.3s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 6rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Redirecting to index.html -->
+    <div class="container">
+      <h1>404</h1>
+      <p>Oops! The page you're looking for doesn't exist.</p>
+      <a href="/" class="btn">Back to Home</a>
+    </div>
+    <script>
+      // Redirect to home page after 5 seconds
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 5000);
+    </script>
   </body>
 </html>
