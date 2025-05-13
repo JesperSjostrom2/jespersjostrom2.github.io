@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './cv.css';
-import Spline from '@splinetool/react-spline';
 import { FaFileDownload, FaFileAlt, FaArrowLeft, FaCube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const CV = () => {
-  const [splineLoaded, setSplineLoaded] = useState(false);
-  const [splineError, setSplineError] = useState(false);
+  const [iframeLoaded, setIframeLoaded] = useState(false);
 
   useEffect(() => {
     // Set document title
@@ -18,13 +16,8 @@ const CV = () => {
     };
   }, []);
 
-  const handleSplineLoad = () => {
-    setSplineLoaded(true);
-  };
-
-  const handleSplineError = () => {
-    setSplineError(true);
-    console.log("Spline failed to load");
+  const handleIframeLoad = () => {
+    setIframeLoaded(true);
   };
 
   return (
@@ -50,29 +43,22 @@ const CV = () => {
         
         <div className="spline-container">
           <div className="spline-inner">
-            {splineError ? (
-              <div className="spline-placeholder">
-                <FaCube className="cube-icon" />
-                <p>3D CV Loading Error</p>
-                <p>Please replace with your actual Spline scene URL</p>
+            <iframe 
+              title="3D CV"
+              src="https://my.spline.design/3dcv-SWw2FKkXztWmB7pjaNMbTNwX/"
+              frameBorder="0"
+              width="100%"
+              height="100%"
+              onLoad={handleIframeLoad}
+              className="spline-iframe"
+            ></iframe>
+            {!iframeLoaded && (
+              <div className="spline-loading">
+                <FaCube className="cube-icon rotating" />
+                <p>Loading 3D Experience...</p>
               </div>
-            ) : (
-              <>
-                {/* Replace the URL below with your actual Spline scene URL */}
-                {/* Comment out this line and uncomment when you have a valid Spline URL */}
-                {/* <Spline 
-                  scene="https://prod.spline.design/YOUR_SPLINE_ID_HERE" 
-                  onLoad={handleSplineLoad}
-                  onError={handleSplineError}
-                /> */}
-                <div className="spline-placeholder">
-                  <FaCube className="cube-icon" />
-                  <p>Add Your 3D CV Here</p>
-                  <p>Replace the placeholder URL with your Spline scene</p>
-                </div>
-              </>
             )}
-            <div className="spline-overlay" style={{ opacity: splineLoaded ? 0 : 1 }}>
+            <div className={`spline-overlay ${iframeLoaded ? 'fade-out' : ''}`}>
               <div className="overlay-content">
                 <p>3D Interactive Resume</p>
                 <p>Click and drag to explore</p>
