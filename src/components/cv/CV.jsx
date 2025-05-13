@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './cv.css';
-import { FaFileDownload, FaFileAlt, FaArrowLeft, FaCube } from 'react-icons/fa';
+import { FaFileDownload, FaFileAlt, FaArrowLeft, FaCube, FaMousePointer, FaChevronDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const CV = () => {
@@ -23,7 +23,7 @@ const CV = () => {
   return (
     <section className="cv-page">
       <div className="cv-container">
-        <div className="cv-header">
+        <div className="cv-header glass-panel">
           <Link to="/hub" className="back-button">
             <FaArrowLeft />
             <span>Back to Profile</span>
@@ -41,40 +41,35 @@ const CV = () => {
           </div>
         </div>
         
-        <div className="spline-container">
-          <div className="spline-inner">
-            <iframe 
-              title="3D CV"
-              src="https://my.spline.design/3dcv-SWw2FKkXztWmB7pjaNMbTNwX/"
-              frameBorder="0"
-              width="100%"
-              height="100%"
-              onLoad={handleIframeLoad}
-              className="spline-iframe"
-            ></iframe>
-            {!iframeLoaded && (
-              <div className="spline-loading">
-                <FaCube className="cube-icon rotating" />
-                <p>Loading 3D Experience...</p>
-              </div>
-            )}
-            <div className={`spline-overlay ${iframeLoaded ? 'fade-out' : ''}`}>
-              <div className="overlay-content">
-                <p>3D Interactive Resume</p>
-                <p>Click and drag to explore</p>
-              </div>
+        <div className="cv-interactive-container">
+          <iframe 
+            src='https://my.spline.design/3dcv-SWw2FKkXztWmB7pjaNMbTNwX/?background=%23171923' 
+            frameborder='0' 
+            width='100%' 
+            height='100%'
+            onLoad={handleIframeLoad} style={{ backgroundColor: "#171923" }}
+            title="3D CV Experience"
+          ></iframe>
+          {!iframeLoaded && (
+            <div className="spline-loading">
+              <FaCube className="cube-icon rotating" />
+              <p>Loading 3D Experience...</p>
             </div>
+          )}
+          <div className="scroll-indicator">
+            <span>Scroll to see more</span>
+            <FaChevronDown className="scroll-arrow" />
           </div>
         </div>
         
-        <div className="cv-info">
-          <div className="info-card">
+        <div className="cv-info-footer">
+          <div className="info-card glass-panel">
             <h2>About My CV</h2>
-            <p>This interactive 3D CV was created using Spline, showcasing my skills and experience in a unique format. Feel free to explore the 3D environment by clicking and dragging.</p>
+            <p>This interactive 3D CV was created using Spline, showcasing my skills and experience in a unique format. Feel free to explore the 3D environment by clicking and dragging in the background.</p>
             <p>For a more traditional version, download the PDF using the buttons above.</p>
           </div>
           
-          <div className="info-card">
+          <div className="info-card glass-panel">
             <h2>Skills Highlight</h2>
             <div className="skills-grid">
               <div className="skill-item">
