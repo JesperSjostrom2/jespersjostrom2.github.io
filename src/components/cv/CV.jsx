@@ -8,13 +8,7 @@ const CV = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Set document title
-    document.title = "Jepps | CV";
-    
-    // Return a cleanup function to reset the title
-    return () => {
-      document.title = "Jesper Sjöström";
-    };
+    document.title = 'CV - Jesper Sjöström';
   }, []);
 
   const handleSplineLoad = () => {
@@ -32,11 +26,11 @@ const CV = () => {
             </Link>
             <h1>Interactive CV</h1>
             <div className="download-buttons">
-              <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download className="download-button original-cv">
+              <a href="/cv.pdf" download className="download-button original-cv">
                 <FaFileDownload />
                 <span>Download CV</span>
               </a>
-              <a href={`${process.env.PUBLIC_URL}/Jesper_Sjostrom_FE_CV.pdf`} download className="download-button ats-cv">
+              <a href="/Jesper_Sjostrom_FE_CV.pdf" download className="download-button ats-cv">
                 <FaFileAlt />
                 <span>Simplified Version</span>
               </a>

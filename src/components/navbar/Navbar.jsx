@@ -33,7 +33,9 @@ const Navbar = () => {
 
   // Handle scroll spy cleanup
   useEffect(() => {
-    if (location.pathname !== '/') {
+    const isHomePage = location.pathname === '/' || location.pathname === '';
+    
+    if (!isHomePage) {
       // Disable all scroll spy events
       Events.scrollEvent.remove('begin');
       Events.scrollEvent.remove('end');
@@ -53,7 +55,9 @@ const Navbar = () => {
   }, [location]);
 
   const renderNavLinks = () => {
-    if (location.pathname !== '/') {
+    const isHomePage = location.pathname === '/' || location.pathname === '';
+    
+    if (!isHomePage) {
       return (
         <>
           <Link to="/" className="nav-link" onClick={closeMenu}>

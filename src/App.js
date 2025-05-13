@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Intro from './components/intro/Intro';
 import About from './components/about/About';
@@ -15,7 +15,7 @@ import CV from './components/cv/CV';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Routes>
         <Route path="/" element={
           <>
@@ -61,7 +61,7 @@ function App() {
         } />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
