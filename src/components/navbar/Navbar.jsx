@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import './navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const navRef = useRef();
@@ -34,19 +35,20 @@ const Navbar = () => {
 
   return (
     <header ref={headerRef} className="header">
-      <a href="#home">
+      <Link to="/">
         <img
           src={logo}
           className={`logo ${isOpen ? 'logo-open' : ''}`}
           alt="logo"
         />
-      </a>
+      </Link>
       <nav ref={navRef} className={`navbar ${isOpen ? 'responsive_nav' : ''}`}>
-        <a href="#about" onClick={closeNavbar}>About</a>
-        <a href="#education" onClick={closeNavbar}>Education</a>
-        <a href="#projects" onClick={closeNavbar}>Projects</a>
-        <a href="#skills" onClick={closeNavbar}>Skills</a>
-        <a href="#contact" onClick={closeNavbar}>Contact</a>
+        <a href="/#about" onClick={closeNavbar}>About</a>
+        <a href="/#education" onClick={closeNavbar}>Education</a>
+        <a href="/#projects" onClick={closeNavbar}>Projects</a>
+        <a href="/#skills" onClick={closeNavbar}>Skills</a>
+        <a href="/#contact" onClick={closeNavbar}>Contact</a>
+        <Link to="/hub" className="nav-link" onClick={closeNavbar}>Hub</Link>
         <button className="cv">
           <a href="https://github.com/jespersjostrom2/my-cv/raw/main/updatedcv.pdf" download="cv.pdf">
             <span>Download CV</span>

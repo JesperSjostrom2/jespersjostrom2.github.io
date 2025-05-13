@@ -10,22 +10,46 @@ import Loginpage from './components/loginpage/Loginpage';
 import Adminpage from './components/admin/Admin';
 import Signup from './components/signup/Signup';
 import Projects from './components/projects/Projects';
+import Hub from './components/dev/Hub';
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Intro />
-      <About />
-      <Education />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
       <Routes>
-        <Route path="/login" element={<Loginpage />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/admin" element={<Adminpage />} />
+        <Route path="/" element={
+          <>
+            <Navbar />
+            <Intro />
+            <About />
+            <Education />
+            <Projects />
+            <Skills />
+            <Contact />
+            <Footer />
+          </>
+        } />
+        <Route path="/login" element={
+          <>
+            <Navbar />
+            <Loginpage />
+            <Footer />
+          </>
+        } />
+        <Route path="/signup" element={
+          <>
+            <Navbar />
+            <Signup />
+            <Footer />
+          </>
+        } />
+        <Route path="/admin" element={
+          <>
+            <Navbar />
+            <Adminpage />
+            <Footer />
+          </>
+        } />
+        <Route path="/hub" element={<Hub />} />
       </Routes>
     </BrowserRouter>
   );
