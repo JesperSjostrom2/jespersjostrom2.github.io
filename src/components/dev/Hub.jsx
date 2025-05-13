@@ -68,7 +68,7 @@ const Hub = () => {
                 <div className="profile-name-container">
                   <h1 className="profile-name">Jepps</h1>
                   <div className="username-badge-container">
-                    <div className="profile-username">jepps</div>
+                    <div className="profile-username">@jepps</div>
                     <div className="discord-badges">
                       <img src={activeDeveloperBadge} className="discord-badge" alt="Active Developer" />
                       <img src={hypesquadBadge} className="discord-badge" alt="Hypesquad Bravery" />

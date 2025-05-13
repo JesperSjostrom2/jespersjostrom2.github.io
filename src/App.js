@@ -11,6 +11,7 @@ import Adminpage from './components/admin/Admin';
 import Signup from './components/signup/Signup';
 import Projects from './components/projects/Projects';
 import Hub from './components/dev/Hub';
+import CV from './components/cv/CV';
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
           </>
         } />
         <Route path="/hub" element={<Hub />} />
+        <Route path="/cv" element={<CV />} />
       </Routes>
     </BrowserRouter>
   );
