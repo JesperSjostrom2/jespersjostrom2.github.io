@@ -2,12 +2,13 @@ import React, { useRef, useState, useEffect } from 'react';
 import './navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../../assets/logo.png';
-import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link, useLocation } from 'react-router-dom';
+import { Link as ScrollLink, scroller, Events } from 'react-scroll';
 
 const Navbar = () => {
   const headerRef = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,17 +31,44 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return (
-    <header ref={headerRef} className="header">
-      <Link to="/hub">
-        <img src={logo} className="logo" alt="logo" />
-      </Link>
-      
-      <button className="nav-btn" onClick={toggleMenu} aria-label="Toggle menu">
-        {isMenuOpen ? <FaTimes /> : <FaBars />}
-      </button>
+  // Handle scroll spy cleanup
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      // Disable all scroll spy events
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+      // Reset scroll position
+      window.scrollTo(0, 0);
+    } else {
+      // Re-enable scroll spy events on home page
+      Events.scrollEvent.register('begin', () => {});
+      Events.scrollEvent.register('end', () => {});
+    }
 
-      <nav className={`navbar ${isMenuOpen ? 'responsive_nav' : ''}`}>
+    return () => {
+      // Cleanup scroll events
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    };
+  }, [location]);
+
+  const renderNavLinks = () => {
+    if (location.pathname !== '/') {
+      return (
+        <>
+          <Link to="/" className="nav-link" onClick={closeMenu}>
+            Home
+          </Link>
+          <Link to="/cv" className="cv" onClick={closeMenu}>
+            <span>CV</span>
+            <i></i>
+          </Link>
+        </>
+      );
+    }
+
+    return (
+      <>
         <ScrollLink 
           to="about" 
           smooth={true} 
@@ -50,6 +78,7 @@ const Navbar = () => {
           spy={true}
           activeClass="active"
           className="nav-link"
+          isDynamic={true}
         >
           About
         </ScrollLink>
@@ -62,6 +91,7 @@ const Navbar = () => {
           spy={true}
           activeClass="active"
           className="nav-link"
+          isDynamic={true}
         >
           Education
         </ScrollLink>
@@ -74,6 +104,7 @@ const Navbar = () => {
           spy={true}
           activeClass="active"
           className="nav-link"
+          isDynamic={true}
         >
           Projects
         </ScrollLink>
@@ -86,6 +117,7 @@ const Navbar = () => {
           spy={true}
           activeClass="active"
           className="nav-link"
+          isDynamic={true}
         >
           Skills
         </ScrollLink>
@@ -98,6 +130,7 @@ const Navbar = () => {
           spy={true}
           activeClass="active"
           className="nav-link"
+          isDynamic={true}
         >
           Contact
         </ScrollLink>
@@ -105,6 +138,22 @@ const Navbar = () => {
           <span>CV</span>
           <i></i>
         </Link>
+      </>
+    );
+  };
+
+  return (
+    <header ref={headerRef} className="header">
+      <Link to="/hub">
+        <img src={logo} className="logo" alt="logo" />
+      </Link>
+      
+      <button className="nav-btn" onClick={toggleMenu} aria-label="Toggle menu">
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      <nav className={`navbar ${isMenuOpen ? 'responsive_nav' : ''}`}>
+        {renderNavLinks()}
       </nav>
     </header>
   );

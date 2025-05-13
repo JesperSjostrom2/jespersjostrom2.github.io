@@ -15,7 +15,7 @@ import CV from './components/cv/CV';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={
           <>
@@ -52,8 +52,6 @@ function App() {
         } />
         <Route path="/hub" element={<Hub />} />
         <Route path="/cv" element={<CV />} />
-        {/* Catch all route for 404 */}
-        <Route path="*" element={<Navigate to="/404" replace />} />
         <Route path="/404" element={
           <div className="not-found-container">
             <h1>404</h1>
@@ -61,6 +59,7 @@ function App() {
             <a href="/" className="btn">Back to Home</a>
           </div>
         } />
+        <Route path="*" element={<Navigate to="/404" replace />} />
       </Routes>
     </BrowserRouter>
   );
