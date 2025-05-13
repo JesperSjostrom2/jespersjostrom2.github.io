@@ -1,7 +1,7 @@
 {
-  "homepage": "https://jespersjostrom.se/",
-  "name": "official-portfolio",
-  "version": "0.1.0",
+  "homepage": "https://jespersjostrom2.github.io",
+  "name": "jespersjostrom2.github.io",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -13,6 +13,7 @@
     "axios": "^1.4.0",
     "dotenv": "^16.0.3",
     "emailjs": "^4.0.2",
+    "framer-motion": "^12.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
