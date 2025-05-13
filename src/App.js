@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import Intro from './components/intro/Intro';
 import About from './components/about/About';
@@ -52,6 +52,15 @@ function App() {
         } />
         <Route path="/hub" element={<Hub />} />
         <Route path="/cv" element={<CV />} />
+        {/* Catch all route for 404 */}
+        <Route path="*" element={<Navigate to="/404" replace />} />
+        <Route path="/404" element={
+          <div className="not-found-container">
+            <h1>404</h1>
+            <p>Oops! The page you're looking for doesn't exist.</p>
+            <a href="/" className="btn">Back to Home</a>
+          </div>
+        } />
       </Routes>
     </BrowserRouter>
   );

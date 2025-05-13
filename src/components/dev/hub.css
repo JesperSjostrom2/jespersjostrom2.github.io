@@ -397,13 +397,19 @@
 
 /* Responsive styles */
 @media only screen and (max-width: 32rem) {
-  .profile-card-wrapper {
-    width: 100%;
+  .hub {
     height: auto;
-    min-height: 40rem;
-    padding: 4px;
+    min-height: 100vh;
+    align-items: center;
+    padding: 1rem 0;
   }
-  
+
+  .hub-container {
+    min-height: auto;
+    padding: 1rem;
+    align-items: center;
+  }
+
   .profile-card-wrapper::after {
     top: -3px;
     left: -3px;
@@ -413,11 +419,19 @@
   }
   
   .profile-card {
-    min-height: 40rem;
+    min-height: auto;
   }
 }
 
 @media only screen and (max-width: 30rem) {
+  .hub {
+    padding: 0.5rem 0;
+  }
+
+  .hub-container {
+    padding: 0.5rem;
+  }
+
   .profile-header {
     height: 11rem;
   }

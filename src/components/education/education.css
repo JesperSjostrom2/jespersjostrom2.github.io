@@ -1,24 +1,32 @@
 .education-container {
   max-width: 100%;
-  min-height: 100vh;
-  padding-top: 1.5rem;
+  min-height: 110vh;
+  padding: 2rem 1rem;
   background: var(--color-bg-education);
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .education-content {
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding-bottom: 100px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  margin: 0 auto;
 }
 
 .education-header {
   font-size: 3rem;
   text-align: center;
-  margin-top: 5rem;
+  margin: 4rem 0 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  font-family: 'Poppins', sans-serif;
 }
 
 .education-header span {
@@ -26,6 +34,23 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.education-buttons {
+  flex: 0 0 300px;
+  background: rgba(22, 22, 22, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin-right: 2rem;
+  height: fit-content;
 }
 
 .education-buttons button {
@@ -35,45 +60,129 @@
   font-size: 1.125rem;
   font-weight: 500;
   cursor: pointer;
-  min-width: 10rem;
-  text-align: unset;
-  height: 60px;
+  width: 100%;
+  text-align: left;
+  height: 50px;
+  padding: 0 1rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
   overflow: hidden;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  text-overflow: ellipsis;
+  font-family: 'Poppins', sans-serif;
+}
+
+.education-buttons button:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .education-buttons .selected {
   color: var(--color-white);
-  width: 30px;
+  background: rgba(255, 255, 255, 0.1);
   border-left: 2px solid #f06;
   padding-left: 1rem;
-  animation: slideRightVariant 1s ease forwards;
+  transform: translateX(5px);
 }
 
-.education-content ul {
-  max-width: 80%;
-}
-
-.education-buttons {
-  margin-top: 80px;
-  flex: 1;
-  background: rgba(22, 22, 22, .2);
-  justify-content: center;
+.button-wrapper {
   display: flex;
-  flex-direction: column;
-  padding-left: 1rem;
-  max-width: 13rem;
-  max-height: 20rem;
-  margin-right: 4rem;
-  border-radius: 0.5rem;
-  padding-top: 1rem;
-  overflow-x: auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.button-output {
+  flex: 1;
+  min-width: 0;
   position: relative;
+  min-height: 400px;
+}
+
+.button-output-content {
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  background: rgba(22, 22, 22, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-output-content.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.button-output-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button-output-content li {
+  color: lightgray;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button-output-content li:hover {
+  color: var(--color-white);
+  transform: translateX(5px);
+}
+
+.button-output-content h4 {
+  background: linear-gradient(30deg, #f06, #3cf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button-output-content h5 {
+  font-size: 1rem;
+  color: #7E7E7E;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.chevron {
+  color: var(--color-main);
+  margin-top: 0.3rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.button-output-content li:hover .chevron {
+  transform: translateX(5px);
 }
 
 /* Scrollbar styles */
 .education-buttons::-webkit-scrollbar {
+  width: 4px;
   height: 4px;
 }
 
@@ -83,117 +192,111 @@
 }
 
 .education-buttons::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.button-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 5% 0 10%;
-}
-
-.button-output-content {
-  flex: 2;
-  padding: 4rem 0 0 2rem;
-}
-
-.button-output-content h2 {
-  font-size: 26px;
-}
-
-.button-output-content li {
-  color: lightgray;
-  margin-top: 22px;
-  max-width: 40rem;
-  font-size: 1.1rem;
-}
-
-.button-output-content h4 {
-  background: linear-gradient(30deg, #f06, #3cf);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.2rem
-}
-
-.chevron {
-  color: var(--color-main);
-}
-
-.button-output-content h5 {
-  font-size: 1rem;
-}
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   .button-wrapper {
     flex-direction: column;
-    overflow-x: scroll;
-    margin: 0;
+    padding: 0 1rem 2rem;
+  }
+
+  .education-container {
+    min-height: 80vh;
   }
 
   .education-buttons {
-    max-width: unset;
-    max-height: unset;
-    margin-top: 2rem;
-    flex-direction: unset;
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 2rem 0;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 1rem;
     gap: 0.5rem;
-    margin-right: 0;
-    overflow-x: scroll;
-    justify-content: flex-start;
-    text-align: center;
-    position: relative;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
   }
 
   .education-buttons button {
-    padding-right: 2rem;
-    flex: 1 0 auto;
-    max-width: unset;
-    overflow-x: scroll;
-    width: 30px;
+    flex: 0 0 auto;
+    margin: 0;
+    height: 40px;
+    font-size: 0.95rem;
+    scroll-snap-align: start;
+    min-width: 200px;
+    max-width: 200px;
+    text-align: center;
+    padding: 0 1rem;
+    border: none;
   }
 
   .education-buttons .selected {
-    border: unset;
+    border-left: none;
+    border-bottom: 2px solid #f06;
+    transform: translateY(-2px);
   }
 
-  .education-buttons .selected:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 1px;
-    width: 80%;
+  .button-output {
+    min-height: 300px;
   }
 
   .button-output-content {
-    flex: 2;
-    padding: 4rem 0 0 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .button-output-content li {
-    font-size: 1.2rem;
+    position: relative;
+    padding: 1.5rem;
   }
 
   .button-output-content h2 {
-    font-size: 1.6rem;
+    font-size: 1.75rem;
+  }
+
+  .button-output-content li {
+    font-size: 1rem;
   }
 
   .button-output-content h4 {
-    font-size: 1.4rem;
-  }
-
-  .button-output-content h5 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .education-header {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+  }
+
+  .education-buttons {
+    padding: 0.75rem;
+  }
+
+  .education-buttons button {
+    font-size: 0.9rem;
+    height: 35px;
+    padding: 0 0.75rem;
+    min-width: 180px;
+    max-width: 180px;
+  }
+
+  .button-output-content {
+    padding: 1.25rem;
+  }
+
+  .button-output-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .button-output-content li {
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

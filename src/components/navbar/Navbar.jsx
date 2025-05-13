@@ -3,18 +3,18 @@ import './navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
-  const navRef = useRef();
   const headerRef = useRef();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const showNavbar = () => {
-    setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeNavbar = () => {
-    setIsOpen(false);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -27,38 +27,85 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header ref={headerRef} className="header">
       <Link to="/hub">
-        <img
-          src={logo}
-          className={`logo ${isOpen ? 'logo-open' : ''}`}
-          alt="logo"
-        />
+        <img src={logo} className="logo" alt="logo" />
       </Link>
-      <nav ref={navRef} className={`navbar ${isOpen ? 'responsive_nav' : ''}`}>
-        <a href="/#about" onClick={closeNavbar}>About</a>
-        <a href="/#education" onClick={closeNavbar}>Education</a>
-        <a href="/#projects" onClick={closeNavbar}>Projects</a>
-        <a href="/#skills" onClick={closeNavbar}>Skills</a>
-        <a href="/#contact" onClick={closeNavbar}>Contact</a>
-        <Link to="/cv" className="cv" onClick={closeNavbar}>
+      
+      <button className="nav-btn" onClick={toggleMenu} aria-label="Toggle menu">
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      <nav className={`navbar ${isMenuOpen ? 'responsive_nav' : ''}`}>
+        <ScrollLink 
+          to="about" 
+          smooth={true} 
+          duration={800} 
+          offset={-80} 
+          onClick={closeMenu}
+          spy={true}
+          activeClass="active"
+          className="nav-link"
+        >
+          About
+        </ScrollLink>
+        <ScrollLink 
+          to="education" 
+          smooth={true} 
+          duration={800} 
+          offset={-80} 
+          onClick={closeMenu}
+          spy={true}
+          activeClass="active"
+          className="nav-link"
+        >
+          Education
+        </ScrollLink>
+        <ScrollLink 
+          to="projects" 
+          smooth={true} 
+          duration={800} 
+          offset={-80} 
+          onClick={closeMenu}
+          spy={true}
+          activeClass="active"
+          className="nav-link"
+        >
+          Projects
+        </ScrollLink>
+        <ScrollLink 
+          to="skills" 
+          smooth={true} 
+          duration={800} 
+          offset={-80} 
+          onClick={closeMenu}
+          spy={true}
+          activeClass="active"
+          className="nav-link"
+        >
+          Skills
+        </ScrollLink>
+        <ScrollLink 
+          to="contact" 
+          smooth={true} 
+          duration={800} 
+          offset={-80} 
+          onClick={closeMenu}
+          spy={true}
+          activeClass="active"
+          className="nav-link"
+        >
+          Contact
+        </ScrollLink>
+        <Link to="/cv" className="cv" onClick={closeMenu}>
           <span>CV</span>
           <i></i>
         </Link>
-        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-          <FaTimes />
-        </button>
       </nav>
-      <button className="nav-btn" onClick={showNavbar}>
-        <FaBars />
-      </button>
     </header>
   );
 };

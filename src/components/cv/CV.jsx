@@ -107,8 +107,7 @@ const CV = () => {
             </div>
           </div>
           <div className="scroll-indicator">
-            <span>Scroll here <FaChevronDown className="scroll-arrow" /></span>
-            
+            <span>Middle mouse to move around, Left click to turn camera, scroll to zoom <FaChevronDown className="scroll-arrow" /></span>
           </div>
         </div>
       </div>

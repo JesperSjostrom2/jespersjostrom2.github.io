@@ -8,7 +8,8 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  transition: background-color 0.5s;
+  transition: all 0.3s ease;
+  background-color: transparent;
 }
 
 .logo {
@@ -27,102 +28,158 @@
 }
 
 .navbar a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.navbar a:hover {
+  color: var(--color-main);
+}
+
+.navbar button {
   font-size: 1.2rem;
   color: lightgray;
   font-weight: 700;
   margin-left: 3rem;
   padding: 0 10px;
   transition: 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.navbar a:hover {
+.navbar button:hover {
   color: var(--color-white);
 }
 
 .nav-btn {
+  display: none;
   padding: 5px;
   cursor: pointer;
   background: transparent;
   border: none;
   outline: none;
   color: var(--color-white);
-  visibility: hidden;
-  opacity: 0;
   font-size: 1.8rem;
-}
-
-@media only screen and (max-width: 1024px) {
-  .nav-btn {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .navbar {
-    margin-left: 0;
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 70%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #171717;
-    justify-content: center;
-    gap: 1.5rem;
-    transition: 1s;
-    transform: translateY(-100vh);
-  }
-
-  .responsive_nav {
-    transform: none;
-  }
-
-  .nav-close-btn {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-  }
-
-  .navbar a {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .cv {
-    margin-left: 3rem;
-  }
-
-  .responsive_nav .logo-open {
-    display: block;
-  }
+  z-index: 1000;
 }
 
 /* STICKY NAVBAR */
 .header.sticky {
-  background-color: #171717;
+  background-color: rgba(23, 23, 23, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 2px solid var(--color-main);
+  padding: 15px 10%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(23, 23, 23, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    z-index: 999;
+    padding: 0 1rem;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .responsive_nav {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar a {
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .navbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--color-main);
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+
+  .navbar a:hover::before {
+    left: 0;
+  }
+
+  .navbar a:hover {
+    color: var(--color-white);
+    transform: translateY(-3px);
+  }
+
+  .cv {
+    margin: 0;
+    background: linear-gradient(45deg, var(--color-main), var(--color-main));
+    border: none !important;
+  }
+
+  .cv:hover {
+    background: linear-gradient(45deg, var(--color-main), var(--color-main));
+    opacity: 0.9;
+  }
 }
 
 @media only screen and (max-width: 1070px) {
   .header.sticky {
-    height: 6rem;
-    border-bottom: 3px solid var(--color-main);
+    padding: 15px 5%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar a {
+    font-size: 1.2rem;
+    padding: 0.8rem;
   }
 }
 
 .nav-link {
-  margin: 0 1.5rem;
+  color: var(--color-white);
   text-decoration: none;
-  color: #fff;
   font-weight: 500;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  transition: 0.5s;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
 }
 
 .nav-link:hover {
+  color: var(--color-main);
+}
+
+.nav-link.active {
   color: var(--color-main);
 }

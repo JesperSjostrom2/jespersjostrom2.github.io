@@ -22,6 +22,8 @@ html, body {
     background: var(--color-bg-main);
     color: var(--color-white);
     line-height: 1.7;
+    display: flex;
+    flex-direction: column;
 }
 
 #root {
@@ -43,6 +45,16 @@ html, body {
     --container-width-lg: 75%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
+    --primary-color: #9146FF;
+    --secondary-color: #9948FF;
+    --background-color: #171923;
+    --text-color: #ffffff;
+    --accent-color: #9146FF;
+    --gradient-start: #9146FF;
+    --gradient-end: #9948FF;
+    --card-bg: rgba(30, 31, 42, 0.5);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --header-height: 80px;
 }
 
 /* GLOBAL MEDIA QUERIES */
@@ -181,6 +193,7 @@ section {
     width: 100%;
     overflow: hidden;
     position: relative;
+    scroll-margin-top: var(--header-height);
 }
 
 /* Ensure all containers are properly contained */
@@ -191,4 +204,72 @@ section {
     padding: 0 1rem;
     overflow: hidden;
     position: relative;
+}
+
+/* 404 Page Styles */
+.not-found-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, #0D0D0D 0%, #28262F 100%);
+  z-index: 9999;
+}
+
+.not-found-container h1 {
+  font-size: 8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(30deg, #f06, #3cf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.not-found-container p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #e4e6eb;
+}
+
+.not-found-container .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #f06, #3cf);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.not-found-container .btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Smooth scrolling for hash links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+/* Ensure hash links work with HashRouter */
+a[href^="#"] {
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .not-found-container h1 {
+    font-size: 6rem;
+  }
+  .not-found-container p {
+    font-size: 1.2rem;
+  }
 }
