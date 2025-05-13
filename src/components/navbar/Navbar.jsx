@@ -3,7 +3,7 @@ import './navbar.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../../assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
-import { Link as ScrollLink, scroller, Events } from 'react-scroll';
+import { Link as ScrollLink, Events } from 'react-scroll';
 
 const Navbar = () => {
   const headerRef = useRef();
