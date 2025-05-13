@@ -5,6 +5,8 @@
     padding: 10rem 15% 2rem;
     background: var(--color-bg-intro);
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .intro-content h1 {
@@ -13,7 +15,6 @@
     line-height: 1.2;
     animation: slideRight 1s ease forwards;
     opacity: 0;
-    
     animation-delay: 0.7s;
 }
 
@@ -91,7 +92,7 @@
 }
 
 .btn-cta:hover::after {
-    background-position: 100% 0 ;
+    background-position: 100% 0;
 }
 
 .intro-socials a {
@@ -113,11 +114,13 @@
     animation: slideRight 1s ease forwards;
     animation-delay: 2.1s;
 }
+
 .intro-socials a:nth-child(2) {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2.1s;
 }
+
 .intro-socials a:nth-child(3) {
     opacity: 0;
     animation: slideLeft 1s ease forwards;
@@ -306,6 +309,7 @@
     .intro-glowing-circle {
         transform: scale(0.7);
     }
+    
     .intro-glowing-circle span {
         height: 105%;
     }
@@ -315,8 +319,7 @@
     }
 }
 
-@media only screen and (max-width: 480px)
-{
+@media only screen and (max-width: 480px) {
     .intro-img {
         overflow: hidden;
         height: auto;
@@ -331,6 +334,7 @@
     .intro-container h1 {
         font-size: 3rem;
     }
+    
     .intro-glowing-circle span {
         width: 108%;
     }
@@ -347,6 +351,7 @@
     .image img {
         width: 90vw;
     }
+    
     .intro-glowing-circle span {
         width: 125%;
     }

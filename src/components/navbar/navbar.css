@@ -51,28 +51,6 @@
   font-size: 1.8rem;
 }
 
-.cv {
-  padding: 10px 30px;
-  background: linear-gradient(45deg, #f06, #3cf);
-  transition: 0.5s;
-  position: relative;
-  color: var(--color-white);
-  border-radius: 0.2rem;
-  margin-left: 2rem;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.cv a {
-  all: unset;
-}
-
-.cv:hover {
-  box-shadow: 0 0 35px var(--color-main);
-  transform: scale(1.02);
-}
-
 @media only screen and (max-width: 1024px) {
   .nav-btn {
     visibility: visible;

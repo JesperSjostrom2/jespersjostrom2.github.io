@@ -10,11 +10,25 @@
     outline: 0;
     box-sizing: border-box;
     list-style: none;
+    scroll-behavior: smooth;
 }
 
-
-html {
+html, body {
     width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-bg-main);
+    color: var(--color-white);
+    line-height: 1.7;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
 }
 
 :root {
@@ -23,21 +37,15 @@ html {
     --color-bg-variant: #171717;
     --color-bg-education: linear-gradient(220deg, #28262F 0%, #151515 100%);
     --color-bg-skills: linear-gradient(60deg, #161616 10.94%, #28262F 54.69%, #191919 100%);
-
     --color-white: #fff;
     --color-main: #F06;
     --color-gradient: linear-gradient(229.52deg, #FF2770 -13.63%, #45F3FF 111.16%);
-
     --container-width-lg: 75%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
 }
 
 /* GLOBAL MEDIA QUERIES */
-
-html {
-    scroll-behavior: smooth;
-}
 
 @media (max-width: 1200px) {
     html {
@@ -53,13 +61,6 @@ html {
     .footer {
         padding: 2rem 3%;
     }
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--color-bg-main);
-    color: var(--color-white);
-    line-height: 1.7;
 }
 
 /* KEYFRAMES ANIMATIONS */
@@ -135,7 +136,6 @@ body {
     0% {
         transform: rotate(0);
     }
-
     100% {
         transform: rotate(360deg);
     }
@@ -145,7 +145,6 @@ body {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
@@ -160,4 +159,36 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+/* Mobile overflow fixes */
+@media screen and (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    #root {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+}
+
+/* Ensure all sections are properly contained */
+section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ensure all containers are properly contained */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    overflow: hidden;
+    position: relative;
 }

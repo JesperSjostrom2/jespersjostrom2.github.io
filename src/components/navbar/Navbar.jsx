@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <header ref={headerRef} className="header">
-      <Link to="/">
+      <Link to="/hub">
         <img
           src={logo}
           className={`logo ${isOpen ? 'logo-open' : ''}`}
@@ -48,13 +48,10 @@ const Navbar = () => {
         <a href="/#projects" onClick={closeNavbar}>Projects</a>
         <a href="/#skills" onClick={closeNavbar}>Skills</a>
         <a href="/#contact" onClick={closeNavbar}>Contact</a>
-        <Link to="/hub" className="nav-link" onClick={closeNavbar}>Hub</Link>
-        <button className="cv">
-          <a href="https://github.com/jespersjostrom2/my-cv/raw/main/updatedcv.pdf" download="cv.pdf">
-            <span>Download CV</span>
-            <i></i>
-          </a>
-        </button>
+        <Link to="/cv" className="cv" onClick={closeNavbar}>
+          <span>CV</span>
+          <i></i>
+        </Link>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>

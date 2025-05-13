@@ -59,7 +59,7 @@ const Hub = () => {
               
               <div className="status-button">
                 <FaRegMessage className="status-button-icon" />
-                <span>darango </span>
+                <span>chillin </span>
               </div>
             </div>
             
