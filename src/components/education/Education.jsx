@@ -42,7 +42,6 @@ function ButtonGroup({ selectedButton, handleButtonClick }) {
 }
 
 function ButtonOutput({ selectedButton }) {
-  const [content, setContent] = useState(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
