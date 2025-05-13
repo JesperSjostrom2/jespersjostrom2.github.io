@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './cv.css';
 import Spline from '@splinetool/react-spline';
-import { FaFileDownload, FaFileAlt, FaArrowLeft } from 'react-icons/fa';
+import { FaFileDownload, FaFileAlt, FaArrowLeft, FaCube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const CV = () => {
+  const [splineLoaded, setSplineLoaded] = useState(false);
+  const [splineError, setSplineError] = useState(false);
+
   useEffect(() => {
     // Set document title
     document.title = "Jepps | CV";
@@ -14,6 +17,15 @@ const CV = () => {
       document.title = "Jesper Sjöström";
     };
   }, []);
+
+  const handleSplineLoad = () => {
+    setSplineLoaded(true);
+  };
+
+  const handleSplineError = () => {
+    setSplineError(true);
+    console.log("Spline failed to load");
+  };
 
   return (
     <section className="cv-page">
@@ -38,8 +50,29 @@ const CV = () => {
         
         <div className="spline-container">
           <div className="spline-inner">
-            <Spline scene="https://prod.spline.design/YOUR_SPLINE_ID_HERE" />
-            <div className="spline-overlay">
+            {splineError ? (
+              <div className="spline-placeholder">
+                <FaCube className="cube-icon" />
+                <p>3D CV Loading Error</p>
+                <p>Please replace with your actual Spline scene URL</p>
+              </div>
+            ) : (
+              <>
+                {/* Replace the URL below with your actual Spline scene URL */}
+                {/* Comment out this line and uncomment when you have a valid Spline URL */}
+                {/* <Spline 
+                  scene="https://prod.spline.design/YOUR_SPLINE_ID_HERE" 
+                  onLoad={handleSplineLoad}
+                  onError={handleSplineError}
+                /> */}
+                <div className="spline-placeholder">
+                  <FaCube className="cube-icon" />
+                  <p>Add Your 3D CV Here</p>
+                  <p>Replace the placeholder URL with your Spline scene</p>
+                </div>
+              </>
+            )}
+            <div className="spline-overlay" style={{ opacity: splineLoaded ? 0 : 1 }}>
               <div className="overlay-content">
                 <p>3D Interactive Resume</p>
                 <p>Click and drag to explore</p>
