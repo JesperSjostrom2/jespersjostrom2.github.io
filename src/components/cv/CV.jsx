@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import './cv.css';
 import { FaFileDownload, FaFileAlt, FaArrowLeft, FaChevronDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -6,7 +6,6 @@ import Spline from '@splinetool/react-spline';
 
 const CV = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const splineRef = useRef(null);
 
   useEffect(() => {
     // Set document title
@@ -71,13 +70,13 @@ const CV = () => {
                   </div>
                 </div>
                 <div className="skill-item">
-                  <span className="skill-name">Tailwind</span>
+                  <span className="skill-name">Backbone.js</span>
                   <div className="skill-bar">
                     <div className="skill-level" style={{ width: '75%' }}></div>
                   </div>
                 </div>
                 <div className="skill-item">
-                  <span className="skill-name">Firebase</span>
+                  <span className="skill-name">Git</span>
                   <div className="skill-bar">
                     <div className="skill-level" style={{ width: '70%' }}></div>
                   </div>
@@ -108,8 +107,8 @@ const CV = () => {
             </div>
           </div>
           <div className="scroll-indicator">
-            <span>Scroll here</span>
-            <FaChevronDown className="scroll-arrow" />
+            <span>Scroll here <FaChevronDown className="scroll-arrow" /></span>
+            
           </div>
         </div>
       </div>
